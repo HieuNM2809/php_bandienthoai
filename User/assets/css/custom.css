@@ -1,0 +1,17 @@
+
+.wrap{
+    width: 45%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.textline{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 3rem;
+    line-height: 1.5rem;
+}
+
