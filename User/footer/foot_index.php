@@ -131,6 +131,55 @@ $('#carousel-related-product').slick({
 </script>
 <!-- End Slider Script -->
 
+<!-- cart -->
+
+<!--? Search model Begin -->
+<div class="search-model-box">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-btn">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Searching key.....">
+        </form>
+    </div>
+</div>
+<!-- Search model end -->
+
+<!-- JS here -->
+
+<script src="<?php echo $level.js_path_2."vendor/modernizr-3.5.0.min.js";?>"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="<?php echo $level.js_path_2."vendor/jquery-1.12.4.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."popper.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."bootstrap.min.js";?>"></script>
+<!-- Jquery Mobile Menu -->
+<script src="<?php echo $level.js_path_2."jquery.slicknav.min.js";?>"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="<?php echo $level.js_path_2."owl.carousel.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."slick.min.js";?>"></script>
+
+<!-- One Page, Animated-HeadLin -->
+<script src="<?php echo $level.js_path_2."wow.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."animated.headline.js";?>"></script>
+
+<!-- Scrollup, nice-select, sticky -->
+<script src="<?php echo $level.js_path_2."jquery.scrollUp.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.nice-select.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.sticky.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.magnific-popup.js";?>"></script>
+
+<!-- contact js -->
+<script src="<?php echo $level.js_path_2."contact.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.form.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.validate.min.js";?>"></script>
+<script src="<?php echo $level.js_path_2."mail-script.js";?>"></script>
+<script src="<?php echo $level.js_path_2."jquery.ajaxchimp.min.js";?>"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="<?php echo $level.js_path_2."plugins.js";?>"></script>
+<script src="<?php echo $level.js_path_2."main.js";?>"></script>
+
+
 </body>
 
 </html>

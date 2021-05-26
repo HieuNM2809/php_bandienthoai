@@ -1,22 +1,33 @@
 <?php
     require_once("config.php");
-    require_once($level.head_path."head_index.php");
-    require_once($level.head_path."header.php");
+    
     if($isIndex==true)
     {
+        require_once($level.head_path."head_index.php");
+        require_once($level.head_path."header.php");
         require_once($level.body_path."slideshow_index.php");
         require_once($level.body_path."sanphamkhac_index.php");
         require_once($level.body_path."sansale_index.php");
     }
     if($isMuaHang==true)
     {
+        require_once($level.head_path."head_index.php");
+        require_once($level.head_path."header.php");
         require_once($level.body_path."danhsachsanpham.php");   
         require_once($level.body_path."thuonghieu.php");
     }
     if($isChiTietSanPham==true)
     {
+        require_once($level.head_path."head_index.php");
+        require_once($level.head_path."header.php");
         require_once($level.body_path."content_chitietsanpham.php");
         require_once($level.body_path."article_chitietsanpham.php");
+    }
+    if($isCart==true){
+        require_once($level.head_path."head_cart.php");
+        require_once($level.head_path."header.php");
+        require_once($level.body_path."GioHang_cart.php");
+        require_once($level.body_path."danhsachsanpham_cart.php");
     }
     require_once($level.footer_path."foot_index.php");
 ?>
