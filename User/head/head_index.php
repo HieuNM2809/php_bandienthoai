@@ -16,4 +16,9 @@
     <link rel="stylesheet" href="<?php echo $level.css_path."fontawesome.min.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."fontgoogle.css";?>">
 
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="<?php echo $level.css_path."slick.min.css";?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo $level.css_path."slick-theme.css";?>">
+    <!--
+
 </head>
