@@ -44,7 +44,7 @@
     //================================================
     //==========Start  lấy dư liệu Client: 
     //================================================
-    $listClient = DP::run_query('select * from client',[],2);
+    $listClient = DP::run_query('select * from client where cliStatus =1',[],2);
 
 
 
@@ -52,5 +52,10 @@
     //==========Start  lấy dư liệu List film: 
     //================================================
     $lstFilm = DP::run_query('select * from product pd, images img where pd.prodID = img.prodID',[],2);
+
+     //================================================
+    //==========Start  lấy dư liệu Provided: 
+    //================================================
+    $listProvided = DP::run_query('select * from provided where provStatus = 1',[],2);
     
 ?>

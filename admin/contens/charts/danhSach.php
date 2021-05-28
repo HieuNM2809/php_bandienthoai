@@ -83,7 +83,7 @@
                                             <tr role="row" class="odd">
                                                 <td><?php echo $value["prodID"] ?></td>
                                                 <td class="sorting_1"><?php echo $value["prodName"] ?></td>
-                                                <td><?php echo $value["prodPrice"] ?></td>
+                                                <td><?php echo number_format($value["prodPrice"]) ?></td>
                                                 <td><?php echo $value["prodStatus"] ?></td>
                                                 <td><?php echo $value["prodReleaseYear"] ?></td>
                                                 <td><?php echo $value["infoOrderSL"] ?></td>

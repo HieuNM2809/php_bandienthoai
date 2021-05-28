@@ -65,17 +65,40 @@
                             </div>
                         </a>    
                     </div>
+                     <!-- Column -->
+                     <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <a href="<?php echo $level.pages_Part."Listprovided.php" ?>">
+                            <div class="card card-hover">
+                                <div class="box bg-info text-center">
+                                    <h1 class="font-light text-white"><i class="fas fa-mobile-alt"></i></h1>
+                                    <h6 class="text-white">Nhà Cung cấp</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                     <!-- Column -->
+                     <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <a href="<?php echo $level.pages_Part."ListClient.php" ?>">
+                            <div class="card card-hover">
+                                <div class="box bg-cyan text-center">
+                                    <h1 class="font-light text-white"><i class="fas fa-user"></i></h1>
+                                    <h6 class="text-white">Khách hàng</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <a href="<?php echo $level.pages_Part."ListFilm.php" ?>">
                             <div class="card card-hover">
                                 <div class="box bg-danger text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                                    <h6 class="text-white">Danh sách điện thoại</h6>
+                                    <h6 class="text-white">DS điện thoại</h6>
                                 </div>
                             </div>
                         </a>
                     </div>
+
                     <!-- Column -->
                      <div class="col-md-6 col-lg-2 col-xlg-3">
                         <a href="<?php echo $level.pages_Part."Order.php" ?>">
@@ -98,17 +121,7 @@
                             </div>
                         </a>    
                     </div>
-                     <!-- Column -->
-                     <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="<?php echo $level.pages_Part."ListClient.php" ?>">
-                            <div class="card card-hover">
-                                <div class="box bg-cyan text-center">
-                                    <h1 class="font-light text-white"><i class="fas fa-user"></i></h1>
-                                    <h6 class="text-white">Khách hàng</h6>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
 
                 </div>
              

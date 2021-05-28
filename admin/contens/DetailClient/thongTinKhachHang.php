@@ -1,40 +1,56 @@
+<?php   require_once ($level.compPart."Client_Detail_Data.php") ?> 
 <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <form class="form-horizontal">
                             <div class="card-body">
-                                <h4 class="Radio Buttonscard-title">Thông tin cá nhân</h4>
+                                <h4 class="Radio Buttonscard-title">Thông tin cá nhân khác hàng</h4>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="First Name Here">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliID'] ?>"  >
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
+                                    <label for="lname" class="col-sm-3 text-right control-label col-form-label">Họ và Tên</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="lname" placeholder="Last Name Here">
+                                        <input type="text" class="form-control"   disabled  value="<?php echo $cli[0]['cliName'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="lname" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                                    <label for="lname" class="col-sm-3 text-right control-label col-form-label">Địa chỉ</label>
                                     <div class="col-sm-9">
-                                        <input type="password" class="form-control" id="lname" placeholder="Password Here">
+                                        <input type="password" class="form-control" disabled  value="<?php echo $cli[0]['cliAddress'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="email1" class="col-sm-3 text-right control-label col-form-label">Company</label>
+                                    <label for="email1" class="col-sm-3 text-right control-label col-form-label">Thành phố sống</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="email1" placeholder="Company Name Here">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliCountry'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
+                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Mã bưu điện</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="cono1" placeholder="Contact No Here">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliPostOfficeCode'] ?>">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Số điện thoại</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliPhone'] ?>">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Tên đăng nhập</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliUser'] ?>">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Mật khẩu</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control"  disabled  value="<?php echo $cli[0]['cliPass'] ?>">
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <label style="text-align: end;" class="col-sm-3">Radio Buttons</label>
                                     <div class="col-sm-9">
                                         <div class="custom-control custom-radio">
@@ -50,7 +66,7 @@
                                             <label class="custom-control-label" for="customControlValidation3">Third One</label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="form-group row">
                                     <label style="text-align: end;" class="col-md-3">Checkboxes</label>
                                     <div class="col-md-9">
@@ -96,13 +112,13 @@
 
                                
 
-                            </div>
-                            <div class="border-top">
+                            </div> -->
+                            <!-- <div class="border-top">
                                 <div class="card-body">
                                     <button type="submit" class="btn btn-success">Save</button>
                                     <button type="reset" class="btn btn-primary">Reset</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                   

@@ -1,0 +1,159 @@
+create table PROVIDED
+(
+		provID int not null unique AUTO_INCREMENT,
+		provFullName varchar(50),
+		provName varchar(20),
+		provAddress varchar(250),
+		provPostOfficeCode char(10),
+		provCountry varchar(25),
+		provPhone char(10),
+		provDescription text,
+	    provStatus text,
+
+		constraint PK_provID primary key(provID)
+);
+-- create table phân loại
+create table CATEGORY 
+(
+     catID int not null unique AUTO_INCREMENT,
+	 catName varchar(250),
+	 catDescription text,
+	 catStatus text,
+
+
+	 constraint PK_catID primary key(catID)
+);
+
+-- create table sanpham 
+create table PRODUCT
+(
+     prodID int not null unique AUTO_INCREMENT,
+	 prodName varchar(250),
+	 prodPrice int ,
+	 prodSL int ,
+	 prodInit varchar(250),  -- đơn vị 
+	 prodReleaseYear int ,
+	 prodDescription text,
+	 prodStatus text,
+	 provID int,
+	 catID int ,
+	 constraint PK_prodID primary key(prodID)
+);
+create table IMAGES
+( 
+	prodID int ,
+	img1 varchar(250),
+	img2 varchar(250),
+	img3 varchar(250),
+	img4 varchar(250)
+);
+create table COLOR
+( 
+   prodID int ,
+   color1 varchar(250),
+   color2 varchar(250),
+   color3 varchar(250),
+   color4 varchar(250)
+  );
+create table CLIENT 
+(
+	 cliID int not null unique AUTO_INCREMENT ,
+	 cliName varchar(250), 
+     cliAddress  varchar(500),
+	 cliCountry varchar(30),
+	 cliPostOfficeCode  char(10) ,
+	 cliPhone char(10),
+	 cliStatus text,
+	 cliUser   varchar(50),
+         cliPass   varchar(50),
+
+
+	 constraint PK_cliID primary key(cliID)
+);
+create table STAFF_LOGIN
+(
+	 LoginID int not null unique AUTO_INCREMENT,
+	 LoginUserName varchar(30) not null,
+	 LoginPassword varchar(30) not null, 
+	 LoginStatus text,
+
+	   constraint PK_staffLoginID primary key(LoginID)
+);
+create table STAFF
+(
+	 staID int not null unique AUTO_INCREMENT,
+	 staName varchar(250), 
+     staBirthday  date,
+     staAddress  varchar(250),
+     staImg  varchar(250),
+	 staPhone  char(10) ,
+	 staSex bit ,
+	 staDescription text,
+	 staStatus text,
+	 staSalary int,
+	 staPosition varchar(50),
+	 LoginID int ,
+
+	 constraint PK_staID primary key(staID)
+);
+
+create table ORDERR
+(
+	 ordID int not null unique AUTO_INCREMENT,
+     ordDate  date,
+	 ordDescription text,
+	 ordBill bit ,
+	 ordStatus text,
+	 cliID int, 
+     staID int ,
+	 shiID int ,
+
+	 constraint PK_ordID primary key(ordID)
+);
+create table INFORMATION_ORDER
+(
+	 infoOrderID int not null unique AUTO_INCREMENT,
+	 ordID int, 
+     prodID int ,
+     infoOrderSL  int ,
+     infoOrderPrice int,
+	 infoStatus text,
+
+	 constraint PK_infoOrderID primary key(infoOrderID)
+);
+alter table STAFF  
+add constraint FK_LoginID foreign key(LoginID)
+ references STAFF_LOGIN(LoginID);
+
+alter table PRODUCT 
+add constraint FK_provID foreign key(provID)
+ references PROVIDED(provID);
+
+ alter table PRODUCT 
+add constraint FK_catID foreign key(catID)
+ references CATEGORY(catID);
+
+ alter table IMAGES
+ add constraint FK_prodID_img  foreign key (prodID)
+ references PRODUCT(prodID);
+
+  alter table COLOR
+ add constraint FK_prodID_color  foreign key (prodID)
+ references PRODUCT(prodID);
+ 
+alter table ORDERR
+add constraint FK_cliID foreign key(cliID)
+ references CLIENT(cliID);
+
+ alter table ORDERR 
+add constraint FK_staID foreign key(staID)
+ references STAFF_LOGIN(LoginID);
+
+alter table INFORMATION_ORDER
+add constraint FK_ordID foreign key(ordID)
+ references ORDERR(ordID);
+
+ alter table INFORMATION_ORDER 
+add constraint FK_prodID foreign key(prodID)
+ references PRODUCT(prodID);
+

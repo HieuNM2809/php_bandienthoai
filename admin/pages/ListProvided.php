@@ -1,19 +1,15 @@
 
 <?php
-    if(isset($_GET['id_cli']) ==false) {
-        // header("location:../index.php");
-        echo '<script language="javascript">';
-        echo 'alert("Hãy chọn nhân viên để xem chi tiết ");';
-        echo ' window.location="ListClient.php";';
-        echo '</script>';
-    }
     $level = "../";
     $Isindex                     =false;
+    $IsListProvided              =true;
+    $IsCreateProvided            =false;
+    $IsEditStaff                 =false;
     $Isauthentication_login      =false;
     $Isauthentication_register   =false;
     $Ischarts                    =false;
     $IscreateStaff               =false;
-    $IsdetailClient              =true;
+    $IsdetailClient              =false;
     $IsdetailPurchaseMenu        =false;
     $IslistClient                =false;
     $IslistFilm                  =false;

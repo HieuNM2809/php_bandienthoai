@@ -73,9 +73,11 @@
                              <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>   
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?php echo $level.pages_Part?>Order.php">Thêm Film</a>
+                                <a class="dropdown-item" href="<?php echo $level.pages_Part?>CreateProvided.php">Thêm Nhà Cung Cấp</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo $level.pages_Part?>CreateStaff.php">Thêm Nhân Viên</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="<?php echo $level.pages_Part?>CreateStaff.php">Thêm Sản Phẩm</a>
                   
                             </div>
                         </li>
@@ -156,6 +158,12 @@
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>DetailClient.php" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu"> Chi tiết khách hàng</span></a></li>
                                 <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>ListClient.php" class="sidebar-link"><i class="far fa-list-alt"></i><span class="hide-menu"> Danh sách khách hàng</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-mobile-alt"></i><span class="hide-menu">Nhà cung cấp</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>CreateProvided.php" class="sidebar-link"><i class="fas fa-user-plus"></i><span class="hide-menu">Thêm nhà cung cấp</span></a></li>
+                                <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>ListProvided.php" class="sidebar-link"><i class="far fa-list-alt"></i><span class="hide-menu"> Danh sách nhà cung cấp</span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo $level.pages_Part?>ListFilm.php" aria-expanded="false"><i class="fas fa-clipboard-list"></i><span class="hide-menu">Danh sách điện thoại</span></a></li>

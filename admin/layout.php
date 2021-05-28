@@ -44,8 +44,18 @@
      }else if($IsEditStaff ==true){
       require_once ($level.editStaffPart."breadcrumb.php");
       require_once ($level.editStaffPart."nhapThongTin.php");
-   }
-
+     }
+     else if($IsCreateProvided == true){
+         require_once ($level.CreateProvidedPart."breadcrumb.php");
+         require_once ($level.CreateProvidedPart."nhapThongTin.php");
+      }else if($IsListProvided ==true){
+         require_once ($level.ListProvidedPart."breadcrumb.php");
+         require_once ($level.ListProvidedPart."danhSach.php");
+      }else if($IsEditProvided ==true){
+         require_once ($level.EditProvidedPart."breadcrumb.php");
+         require_once ($level.EditProvidedPart."nhapThongTin.php");
+      }
+    
 
 
      //================================================

@@ -19,6 +19,9 @@
     define("listStaff_Part","contens/ListStaff/");
     define("order_Part","contens/Order/");
     define("editStaffPart","contens/editStaff/");
+    define("ListProvidedPart","contens/ListProvided/");
+    define("CreateProvidedPart","contens/CreateProvided/");
+    define("EditProvidedPart","contens/EditProvided/");
 
 //=======================assets  images =====================
     define("images_Part","assets/images/");

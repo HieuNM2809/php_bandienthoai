@@ -32,7 +32,7 @@
                                                  <?php  if($value["staSex"] ==1 ) {echo "Nam";}else{ echo "Nữ";}
                                                  ?>
                                             </span>
-                                            Lương:<span class="m-b-15 d-block font-medium"><?php echo $value["staSalary"] ?></span>
+                                            Lương:<span class="m-b-15 d-block font-medium"><?php echo  number_format($value["staSalary"])." VNĐ" ?></span>
                                             Vị trí: <span class="m-b-15 d-block font-medium"><?php echo $value["staPosition"] ?></span>
                                             Miêu tả: <span class="m-b-15 d-block font-medium"><?php echo $value["staDescription"] ?></span>
                                             
