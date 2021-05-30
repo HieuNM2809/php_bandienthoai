@@ -1,6 +1,6 @@
 <?php
     require_once("config.php");
-    
+    if(isset($pro)) require($pro);
     if($isIndex==true)
     {
         require_once($level.head_path."head_index.php");

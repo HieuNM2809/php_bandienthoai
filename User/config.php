@@ -5,6 +5,8 @@
     define('css_path','assets/css/');
     define('css_path_2','assets/css2/');
     define('img_path','assets/img/');
+    define('comp_path','comp/');
+    define('lib_path','lib/');
     define('js_path','assets/js/');
     define('js_path_2','assets/js2/');
 ?>
