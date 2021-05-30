@@ -22,4 +22,12 @@
     <link rel="stylesheet" href="<?php echo $level.css_path_2."slick.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path_2."nice-select.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path_2."style.css";?>">
+
+    <!-- Head_index -->
+    <link rel="stylesheet" href="<?php echo $level.css_path."templatemo.css";?>">
+    <link rel="stylesheet" href="<?php echo $level.css_path."custom.css";?>">
+    <link rel="stylesheet" href="<?php echo $level.css_path."fontawesome.css";?>">
+    <link rel="stylesheet" href="<?php echo $level.css_path."fontawesome.min.css";?>">
+    <link rel="stylesheet" href="<?php echo $level.css_path."fontgoogle.css";?>">
+
 </head>

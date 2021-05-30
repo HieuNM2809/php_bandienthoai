@@ -9,6 +9,8 @@
     <link rel="apple-touch-icon" href="<?php echo $level.img_path."apple-icon.png";?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $level.img_path."hnet.com-image.ico";?>">
 
+
+    <link rel="stylesheet" href="<?php echo $level.css_path."style.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."bootstrap.min.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."templatemo.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."custom.css";?>">
