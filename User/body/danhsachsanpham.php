@@ -70,9 +70,9 @@
                             <div
                                 class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="ChiTietSanPham.php"><i
-                                                class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="ChiTietSanPham.php"><i
+                                    <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a>
+                                    </li>
+                                    <li><a class="btn btn-success text-white mt-2" href="#"><i
                                                 class="far fa-eye"></i></a></li>
                                     <li><a class="btn btn-success text-white mt-2"
                                             href="<?php echo $level."pages/cart.php?id=".$prod['prodID'];?>"><i
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="ChiTietSanPham.html"
+                            <a href="<?php echo $level."pages/ChiTietSanPham.php?id=".$prod['prodID'];?>"
                                 class="h3 text-decoration-none text-left"><b><?php echo $prod['prodName'];?></b></a>
 
                             <ul class="list-unstyled d-flex justify-content-center mb-1">

@@ -23,6 +23,7 @@
         require_once($level.head_path."head_index.php");
         require_once($level.head_path."header.php");
         require_once($level.body_path."content_chitietsanpham.php");
+        require_once($level.comp_path."muahang_pro.php");
         require_once($level.body_path."article_chitietsanpham.php");
     }
     if($isCart==true){
