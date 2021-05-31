@@ -4,7 +4,7 @@
         <div class="row">
 
             <div class="col-md-4 pt-5">
-                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                <a class="navbar-brand text-success logo h1 align-self-center" href="<?php echo $level?>index.php"">
                     <img src="<?php echo $level.img_path."OneWeek2.png";?>" alt="" style="width:40%;">
                 </a>
                 <ul class="list-unstyled text-light footer-link-list">
@@ -36,10 +36,10 @@
             <div class="col-md-4 pt-5">
                 <h2 class="h2 text-light border-bottom pb-3 border-light">Trang</h2>
                 <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Trang Chủ</a></li>
-                    <li><a class="text-decoration-none" href="#">Thông Tin</a></li>
-                    <li><a class="text-decoration-none" href="#">Mua Hàng</a></li>
-                    <li><a class="text-decoration-none" href="#">Liên Hệ</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo $level?>index.php"">Trang Chủ</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo $level.pages_path?>ThongTin.php"">Thông Tin</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo $level.pages_path?>MuaHang.php"">Mua Hàng</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo $level.pages_path?>LienHe.php"">Liên Hệ</a></li>
                 </ul>
             </div>
 

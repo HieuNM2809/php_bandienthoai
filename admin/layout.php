@@ -54,6 +54,9 @@
       }else if($IsEditProvided ==true){
          require_once ($level.EditProvidedPart."breadcrumb.php");
          require_once ($level.EditProvidedPart."nhapThongTin.php");
+      }else if($IsEditClient ==true){
+         require_once ($level.EditClientPart."breadcrumb.php");
+         require_once ($level.EditClientPart."thongTinKhachHang.php");
       }
     
 

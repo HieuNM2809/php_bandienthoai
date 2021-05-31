@@ -22,13 +22,14 @@
     define("ListProvidedPart","contens/ListProvided/");
     define("CreateProvidedPart","contens/CreateProvided/");
     define("EditProvidedPart","contens/EditProvided/");
+    define("EditClientPart","contens/EditClient/");
 
 //=======================assets  images =====================
     define("images_Part","assets/images/");
     define("imagesBackground_Part","assets/images/background/");
     define("imagesBig_Part","assets/images/big/");
     define("imagesUsers_Part","assets/images/users/");
-    define("imagesProduct_Part","assets/images/product/");
+    define("imagesProduct_Part","assets/images/prod/");
 
 //=======================dist  =====================
     define("css_Part","dist/css/");

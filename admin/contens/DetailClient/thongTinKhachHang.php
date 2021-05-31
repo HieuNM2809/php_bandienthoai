@@ -20,7 +20,7 @@
                                 <div class="form-group row">
                                     <label for="lname" class="col-sm-3 text-right control-label col-form-label">Địa chỉ</label>
                                     <div class="col-sm-9">
-                                        <input type="password" class="form-control" disabled  value="<?php echo $cli[0]['cliAddress'] ?>">
+                                        <input type="text" class="form-control" disabled  value="<?php echo $cli[0]['cliAddress'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
