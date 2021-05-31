@@ -24,8 +24,6 @@
         </div>
     </nav>
     <!-- Close Top Nav -->
-
-
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
@@ -45,13 +43,13 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Trang Chủ</a>
+                            <a class="nav-link" href="<?php $level."index.php";?>">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ThongTin.html">Thông Tin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="MuaHang.html">Mua Hàng</a>
+                            <a class="nav-link" href="<?php $level."pages/MuaHang.php";?>">Mua Hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="LienHe.html">Liên Hệ</a>
@@ -104,4 +102,4 @@
                 </div>
             </form>
         </div>
-</div>
+    </div>

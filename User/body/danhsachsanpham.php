@@ -1,7 +1,6 @@
 <!-- Start Danh Sách Sản Phẩm -->
 <div class="container py-5">
     <div class="row">
-
         <div class="col-lg-3">
             <h1 class="h2 pb-4">Loại Sản Phẩm</h1>
             <ul class="list-unstyled templatemo-accordion">
@@ -50,48 +49,41 @@
                             <a class="h3 text-dark text-decoration-none mr-3" href="#">Tất Cả</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Phone</a>
+                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Cảm Ứng</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#">Laptop</a>
+                            <a class="h3 text-dark text-decoration-none" href="#">Bàn Phím</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#">Tablet</a>
+                            <a class="h3 text-dark text-decoration-none" href="#">Gamming</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 pb-4">
-                    <div class="d-flex">
-                        <select class="form-control">
-                            <option>Sắp Xếp</option>
-                            <option>Theo tên</option>
-                            <option>A đến Z</option>
-                        </select>
-                    </div>
-                </div>
             </div>
             <div class="row">
-                <?php foreach($lst_sp as $prod){?>
+                <?php foreach($lst_sp as $prod){ ?>
                 <div class="col-md-4">
                     <div class="card mb-4 product-wap rounded-0">
                         <div class="card rounded-0">
                             <img class="card-img rounded-0 img-fluid"
-                                src="<?php echo $level.img_path.$prod['prodImg '];?>">
+                                src="<?php echo $level.img_path.$prod['prodImg'];?>">
                             <div
                                 class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="ChiTietSanPham.html"><i
+                                    <li><a class="btn btn-success text-white" href="ChiTietSanPham.php"><i
                                                 class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="ChiTietSanPham.html"><i
+                                    <li><a class="btn btn-success text-white mt-2" href="ChiTietSanPham.php"><i
                                                 class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="ChiTietSanPham.html"><i
-                                                class="fas fa-cart-plus"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2"
+                                            href="<?php echo $level."pages/cart.php?id=".$prod['prodID'];?>"><i
+                                                class="fas fa-cart-plus"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="card-body">
                             <a href="ChiTietSanPham.html"
-                                class="h3 text-decoration-none"><?php echo $prod['prodName'];?></a>
+                                class="h3 text-decoration-none text-left"><b><?php echo $prod['prodName'];?></b></a>
 
                             <ul class="list-unstyled d-flex justify-content-center mb-1">
                                 <li>
@@ -102,7 +94,10 @@
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-center mb-0"><?php echo $prod['prodPrice'].$prod['prodInit'];?></p>
+                            <p class="text-left mb-0"><?php echo $prod['prodPrice'].$prod['prodInit'];?></p>
+                            <p class="card-text textline">
+                                <?php echo $prod['prodDescription'];?>
+                            </p>
                         </div>
                     </div>
                 </div>

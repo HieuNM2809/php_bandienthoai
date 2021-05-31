@@ -178,7 +178,12 @@ $('#carousel-related-product').slick({
 <!-- Jquery Plugins, main Jquery -->
 <script src="<?php echo $level.js_path_2."plugins.js";?>"></script>
 <script src="<?php echo $level.js_path_2."main.js";?>"></script>
-
+<?php 
+    if(isset($js))
+    {
+        require_once($js);
+    }
+?>
 
 </body>
 

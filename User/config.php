@@ -9,4 +9,5 @@
     define('lib_path','lib/');
     define('js_path','assets/js/');
     define('js_path_2','assets/js2/');
+    define('api_path','api/');
 ?>

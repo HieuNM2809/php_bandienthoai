@@ -4,6 +4,5 @@
     $isMuaHang=true;
     $isChiTietSanPham=false;
     $isCart=false;
-    $pro=$level.comp_path."muahang_pro.php";
     require_once($level."layout.php");
 ?>
