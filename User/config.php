@@ -1,5 +1,6 @@
 <?php
     define('head_path','head/');
+    define('pages_path','pages/');
     define('body_path','body/');
     define('footer_path','footer/');
     define('css_path','assets/css/');

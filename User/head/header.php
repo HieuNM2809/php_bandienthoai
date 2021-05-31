@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href= " <?php echo $level ?> index.php">
                 <img src="<?php echo $level.img_path."OneWeek.png";?>" alt="" style="width:40%;">
             </a>
 
@@ -45,16 +45,16 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Trang Chủ</a>
+                            <a class="nav-link" href="<?php echo $level ?> index.php">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ThongTin.html">Thông Tin</a>
+                            <a class="nav-link" href="<?php echo $level.pages_path?>ThongTin.php">Thông Tin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="MuaHang.html">Mua Hàng</a>
+                            <a class="nav-link" href="<?php echo $level.pages_path?>MuaHang.php"">Mua Hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="LienHe.html">Liên Hệ</a>
+                            <a class="nav-link" href="<?php echo $level.pages_path?>LienHe.php"">Liên Hệ</a>
                         </li>
                     </ul>
                 </div>
