@@ -4,7 +4,7 @@
                             <div class="card m-t-30">
                                 <a class="card-header link" data-toggle="collapse" data-parent="#accordian-4" href="#Toggle-1" aria-expanded="true" aria-controls="Toggle-1">
                                     <i class="seticon fa fa-arrow-right" aria-hidden="true"></i>
-                                    <span style="font-size:20px">Các sản phẩm bán chạy trong tháng</span>
+                                    <span style="font-size:20px">Các sản phẩm bán chạy trong tháng </span>
                                 </a>
                                 <div id="Toggle-1" class="collapse show multi-collapse">
                                     <div class="card-body widget-content">
