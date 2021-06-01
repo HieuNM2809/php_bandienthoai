@@ -94,7 +94,8 @@
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-left mb-0"><?php echo $prod['prodPrice'].$prod['prodInit'];?></p>
+                            <p class="text-left mb-0">
+                                <?php echo number_format($prod['prodPrice'],0).$prod['prodInit'];?></p>
                             <p class="card-text textline">
                                 <?php echo $prod['prodDescription'];?>
                             </p>

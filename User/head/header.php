@@ -43,13 +43,13 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php $level."index.php";?>">Trang Chủ</a>
+                            <a class="nav-link" href="<?php echo $level."index.php";?>">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ThongTin.html">Thông Tin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php $level."pages/MuaHang.php";?>">Mua Hàng</a>
+                            <a class="nav-link" href="<?php echo $level."pages/MuaHang.php";?>">Mua Hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="LienHe.html">Liên Hệ</a>

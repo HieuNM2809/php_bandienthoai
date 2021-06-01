@@ -17,7 +17,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h1 class="h2"><?php echo $key['prodName'];?></h1>
-                            <p class="h3 py-2"><?php echo $key['prodPrice'];?></p>
+                            <p class="h3 py-2"><?php echo number_format($key['prodPrice']).$key['prodInit'];?></p>
                             <p class="py-2">
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
