@@ -11,8 +11,8 @@
     if(isset($_SESSION['cart'][$id]))
     {
 	//tang so luong cua mot cuon sach da co trong gio hang
-	$_SESSION['cart'][$id]['soluong']=
-	$_SESSION['cart'][$id]['soluong']+1;
+	    $_SESSION['cart'][$id]['soluong']=
+	    $_SESSION['cart'][$id]['soluong']+1;
     }
     else
     {

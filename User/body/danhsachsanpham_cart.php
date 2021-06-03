@@ -1,7 +1,5 @@
 <!--================Cart Area =================-->
-<?php
-//Kiểm tra biến SESSION có tồn tại không
-    require_once("../api/add_to_cart.php");
+<?php   
     $total=0; 
 ?>
 <section class="cart_area section_padding">
@@ -24,8 +22,6 @@
                             <td>
                                 <div class="media">
                                     <div class="d-flex">
-                                        <img src="<?php $level.img_path.$item['img'];?>" alt=""
-                                            style="width: 100%; height: 100%;">
                                     </div>
                                     <div class="media-body">
                                         <p><?php echo $item['name'];?></p>

@@ -14,7 +14,7 @@
     {
         require_once($level.head_path."head_index.php");
         require_once($level.head_path."header.php");
-        require_once($level.comp_path."muahang_pro.php");
+        require_once($level.api_path."phantrang.php");
         require_once($level.body_path."danhsachsanpham.php");   
         require_once($level.body_path."thuonghieu.php");
     }
@@ -30,6 +30,7 @@
         require_once($level.head_path."head_cart.php");
         require_once($level.head_path."header.php");
         require_once($level.body_path."GioHang_cart.php");
+        require_once($level.api_path."/add_to_cart.php");
         require_once($level.body_path."danhsachsanpham_cart.php");
     }
     require_once($level.footer_path."foot_index.php");
