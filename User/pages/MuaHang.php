@@ -4,5 +4,7 @@
     $isMuaHang=true;
     $isChiTietSanPham=false;
     $isCart=false;
+    $isLienHe=false;
+    $isThongTin=false;
     require_once($level."layout.php");
 ?>

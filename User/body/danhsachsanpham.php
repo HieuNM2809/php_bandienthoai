@@ -6,7 +6,7 @@
             <ul class="list-unstyled templatemo-accordion">
                 <li class="pb-3">
                     <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Phone
+                        Cảm Ứng
                         <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul class="collapse show list-unstyled pl-3">
@@ -18,7 +18,7 @@
                 </li>
                 <li class="pb-3">
                     <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        LapTop
+                        Phím Bấm
                         <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul id="collapseTwo" class="collapse list-unstyled pl-3">
@@ -30,7 +30,7 @@
                 </li>
                 <li class="pb-3">
                     <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Tablet
+                        Gaming
                         <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul id="collapseThree" class="collapse list-unstyled pl-3">
@@ -46,20 +46,34 @@
                 <div class="col-md-6">
                     <ul class="list-inline shop-top-menu pb-3 pt-1">
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Tất Cả</a>
+                            <a class="h3 text-dark text-decoration-none mr-3" href="<?php echo "?cat=0"?>">Tất Cả</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Cảm Ứng</a>
+                            <a class="h3 text-dark text-decoration-none mr-3" href="<?php echo "?cat=2"?>">Cảm Ứng</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#">Bàn Phím</a>
+                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=1"?>">Bàn Phím</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#">Gamming</a>
+                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=3"?>">Gamming</a>
                         </li>
                     </ul>
                 </div>
+                <div class="col-md-6">
+                    <form action="<?php echo $level."pages/MuaHang.php?search=";?>" method="GET">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="search" id="" aria-describedby="helpId"
+                                placeholder="" style="width: 69%;">
+                            <button type="submit" class="btn btn-primary"
+                                style="bottom: 40px;left: 71%;">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+            <?php 
+                require_once($level.api_path."phantrang.php");
+                require_once($level.api_path."phanloai.php");
+            ?>
             <div class="row">
                 <?php foreach($lst_sp as $prod){ ?>
                 <div class="col-md-4">
@@ -85,7 +99,7 @@
                             <a href="<?php echo $level."pages/ChiTietSanPham.php?id=".$prod['prodID'];?>"
                                 class="h3 text-decoration-none text-left"><b><?php echo $prod['prodName'];?></b></a>
 
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <ul class="list-unstyled d-flex justify-content-left mb-1">
                                 <li>
                                     <i class="text-warning fa fa-star"></i>
                                     <i class="text-warning fa fa-star"></i>
@@ -94,7 +108,7 @@
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
                             </ul>
-                            <p class="text-left mb-0">
+                            <p class="text-left text-success  mb-0">
                                 <?php echo number_format($prod['prodPrice'],0).$prod['prodInit'];?></p>
                             <p class="card-text textline">
                                 <?php echo $prod['prodDescription'];?>

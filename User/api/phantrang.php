@@ -1,6 +1,16 @@
 <?php
+if(isset($_GET['cat']) && $_GET['cat']!=0)
+{
+    $cat=$_GET['cat'];
+    $query_total_cat="SELECT COUNT(prodID) AS total FROM product WHERE catID=$cat";
+    $total=DP::run_query($query_total_cat,[$cat],2);
+}
+else{
+
+
     $query_total="SELECT COUNT(prodID) AS total FROM product";
     $total=DP::run_query($query_total,[],2);
+}
     // kiểm tra bảng đã có dữ liệu chưa
     if($total!=null&&count($total)>0)
     {
@@ -15,8 +25,10 @@
     }
     $index=($current_page-1)*9;
 
-    $query_sp="SELECT `prodID`, `prodName`, `prodPrice`,
-     `prodSL`, `prodInit`, `prodReleaseYear`,
-      `prodDescription`, `prodImg`, `prodStatus`, `provID`, `catID` FROM `product` limit ".$index.",9";
-    $lst_sp=DP::run_query($query_sp,[],2);
+    // $query_sp="SELECT `prodID`, `prodName`, `prodPrice`,
+    //  `prodSL`, `prodInit`, `prodReleaseYear`,
+    //   `prodDescription`, `prodImg`, `prodStatus`, `provID`, `catID` FROM `product` limit ".$index.",9";
+
+    //     $lst_sp=DP::run_query($query_sp,[],2);
+
 ?>

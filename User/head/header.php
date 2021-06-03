@@ -46,13 +46,13 @@
                             <a class="nav-link" href="<?php echo $level."index.php";?>">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ThongTin.html">Thông Tin</a>
+                            <a class="nav-link" href="<?php echo $level."pages/ThongTin.php";?>">Thông Tin</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo $level."pages/MuaHang.php";?>">Mua Hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="LienHe.html">Liên Hệ</a>
+                            <a class="nav-link" href="<?php echo $level."pages/LienHe.php";?>">Liên Hệ</a>
                         </li>
                     </ul>
                 </div>
