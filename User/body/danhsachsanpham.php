@@ -2,40 +2,31 @@
 <div class="container py-5">
     <div class="row">
         <div class="col-lg-3">
-            <h1 class="h2 pb-4">Loại Sản Phẩm</h1>
+            <h1 class="h2 pb-4">Phân Lọai</h1>
             <ul class="list-unstyled templatemo-accordion">
                 <li class="pb-3">
                     <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Cảm Ứng
+                        Loại
                         <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul class="collapse show list-unstyled pl-3">
-                        <li><a class="text-decoration-none" href="#">Iphone</a></li>
-                        <li><a class="text-decoration-none" href="#">SamSung</a></li>
-                        <li><a class="text-decoration-none" href="#">Oppo</a></li>
-                        <li><a class="text-decoration-none" href="#">RealMe</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?cat=2"?>">Cảm Ứng</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?cat=1"?>">Bàn Phím</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?cat=3"?>">Gamming</a></li>
                     </ul>
                 </li>
                 <li class="pb-3">
                     <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Phím Bấm
+                        Giá
                         <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                        <li><a class="text-decoration-none" href="#">MacBook</a></li>
-                        <li><a class="text-decoration-none" href="#">HP</a></li>
-                        <li><a class="text-decoration-none" href="#">Asus</a></li>
-                        <li><a class="text-decoration-none" href="#">Lenovo</a></li>
-                    </ul>
-                </li>
-                <li class="pb-3">
-                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Gaming
-                        <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
-                    </a>
-                    <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                        <li><a class="text-decoration-none" href="#">Apple</a></li>
-                        <li><a class="text-decoration-none" href="#">SamSung</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?price1=15000000"?>">Trên 15,000,000</a>
+                        </li>
+                        <li><a class="text-decoration-none" href="<?php echo "?price2=15000000"?>">Dưới 15,000,000</a>
+                        </li>
+                        <li><a class="text-decoration-none" href="<?php echo "?price3=1000000"?>">Dưới 1,000,000</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -122,9 +113,48 @@
                 <ul class="pagination pagination-lg justify-content-end">
                     <?php
                         for($i=1;$i<=$page;$i++){
-                    echo '<li class="page-item">
-                        <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'">'.$i.'</a>
-                    </li>';
+                            if(isset($_GET['search']))
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&search='.$search.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(isset($_GET['cat']) && $_GET['cat']!=0)
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&cat='.$cat.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(isset($_GET['price1']) && $_GET['price1']!=0)
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&price1='.$price.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(isset($_GET['price2']) && $_GET['price2']!=0)
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&price2='.$price.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(isset($_GET['price3']) && $_GET['price3']!=0)
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&price3='.$price.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(isset($_GET['cat']) && isset($_GET['search']))
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i.'&cat='.$cat.'&search='.$search.'">'.$i.'</a>
+                                 </li>';
+                            }
+                            else if(!isset($_GET['search']) && !isset($_GET['cat']) || $_GET['cat']==0)
+                            {
+                                echo '<li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i. '">'.$i.'</a>
+                                 </li>';
+                            }
                     }?>
                 </ul>
             </div>
