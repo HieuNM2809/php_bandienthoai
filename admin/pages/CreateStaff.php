@@ -1,5 +1,6 @@
 
 <?php
+   
     $level = "../";
     $Isindex                     =false;
     $Isauthentication_login      =false;

@@ -23,6 +23,7 @@
     define("CreateProvidedPart","contens/CreateProvided/");
     define("EditProvidedPart","contens/EditProvided/");
     define("EditClientPart","contens/EditClient/");
+    define("EditOrderPart","contens/EditOrder/");
 
 //=======================assets  images =====================
     define("images_Part","assets/images/");

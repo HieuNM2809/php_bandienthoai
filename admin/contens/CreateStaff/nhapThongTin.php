@@ -98,8 +98,8 @@
                             </div>
                             <div class="border-top">
                                 <div class="card-body">
-                                    <button type="submit"  class="btn btn-success">Save</button>
-                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                    <button type="submit"  class="btn btn-success">Thêm</button>
+                                    <button type="reset" class="btn btn-primary">Xóa dữ liệu trên form</button>
                                 </div>
                             </div>
                         </form>

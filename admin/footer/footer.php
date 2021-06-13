@@ -2,7 +2,9 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                Mọi quyền được bảo lưu bởi VietnamStar-admin. Được thiết kế và phát triển bởi <a href="https://facebook.com/nguyenhieuk3">VietnamStar</a>.
+                Mọi quyền được bảo lưu bởi Hiếu Minh Inc. Được thiết kế và phát triển bởi <a href="https://facebook.com/nguyenhieuk3">Hiếu Minh</a> 
+               <div style="text-align:right;">  Số lượng truy cập <b><?php echo $soLuongView[0]['SL'] ?></b></div>
+
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

@@ -1,0 +1,8 @@
+
+RewriteEngine On
+RewriteRule "trang-chu" "index.php"
+rewriteRule "thongke" "pages/charts.php"
+RewriteRule "^pages/(.*)-(.*).html$" "pages/charts.php?chart_mou=$1&chart_Yea=$2"
+
+
+

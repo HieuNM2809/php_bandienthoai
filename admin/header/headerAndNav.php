@@ -86,7 +86,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Tìm kiếm và nhấn Enter"> <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
                     </ul>
@@ -115,16 +115,19 @@
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
+                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo $level.images_Part ?>users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <img src="<?php echo $level.images_Part ?>users/<?php echo  $staInfoLogin[0]['staImg'] ?>" alt="user" class="rounded-circle"    style=" height: 42px; width: 49px;">
+                              </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i><?php echo  $staInfoLogin[0]['staName'] ?></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                                <div class="dropdown-divider"></div>
-                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i>Thiết lập tài khoản</a>
+                                <div class="dropdown-divider"></div> 
+                                <a class="dropdown-item" href="<?php echo $level.compPart."LogOut.php"?>" ><i class="fa fa-power-off m-r-5 m-l-5"></i> Đăng xuất</a>
+                                <!-- <div class="dropdown-divider"></div>
+                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">Xem hồ sơ</a></div> -->
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -174,10 +177,10 @@
                                 <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>DetailPurchaseMenu.php" class="sidebar-link"><i class="fas fa-info-circle"></i><span class="hide-menu">Chi tiết đơn mua</span></a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Account</span></a>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Tài khoản</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>authentication-login.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a></li>
-                                <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>authentication-register.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register </span></a></li>
+                                <li class="sidebar-item"><a href="<?php echo $level.compPart."LogOut.php"?>" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Đăng xuất </span></a></li>
+                                <!-- <li class="sidebar-item"><a href="<?php echo $level.pages_Part?>authentication-register.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Đăng ký </span></a></li> -->
                             </ul>
                         </li>
                     </ul>

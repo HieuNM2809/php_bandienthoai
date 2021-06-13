@@ -5,22 +5,22 @@
                         <form action="<?php echo $level."comp/process_Edit_Staff.php"?>"  method="POST" enctype="multipart/form-data"  class="form-horizontal">
                             <div class="card-body">
                                 <h4 class="Radio Buttonscard-title">Thông tin cá nhân</h4>
-                                <div class="form-group row" >
+                                <div class="form-group row" style ="display:none;">
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">ID</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control"  value="<?php echo $staff[0]['staID'] ?>"  name="sID" required>
                                     </div>
                                 </div>
-                                 <div class="form-group row" >
+                                 <div class="form-group row"  style ="display:none;" >
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">ID Login</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control"  value="<?php echo $_GET['id_Login'] ?>"  name="sID_Login" required>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row"  style ="display:none;">
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">Tên đăng nhập</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="suserLogin" value="<?php echo $staff_Login[0]['LoginUserName'] ?>" >
+                                        <input type="text" class="form-control" name="suserLogin"  value="<?php echo $staff_Login[0]['LoginUserName'] ?>" >
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -102,8 +102,8 @@
                             </div>
                             <div class="border-top">
                                 <div class="card-body">
-                                    <button type="submit"  class="btn btn-success">Save</button>
-                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                    <button type="submit"  class="btn btn-success">Lưu</button>
+                                    <button type="reset" class="btn btn-primary">Xóa dữ liệu trêm form</button>
                                 </div>
                             </div>
                         </form>

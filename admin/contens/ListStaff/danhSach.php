@@ -8,7 +8,7 @@
                 <div class="col-sm-12 col-md-6">
                     <div id="zero_config_filter" class="dataTables_filter">
                         <label style="display: flex;">
-                            <button type="button" class="btn btn-cyan btn-sm">Search</button>                   
+                            <button type="button" class="btn btn-cyan btn-sm">Tìm kiếm</button>                   
                             <input style="width: 100%; margin-left: 10px;" type="search"
                                 class="form-control form-control-sm" placeholder=""
                                 aria-controls="zero_config">
@@ -38,10 +38,10 @@
                                             
                                             <div class="comment-footer mt-3" >
                                                 <button type="button" class="btn btn-cyan btn-sm">
-                                                    <a style= "color:white;" href="<?php echo $level.pages_Part."EditStaff.php?id=".$value["staID"]."&id_Login=".$value["LoginID"];?>">Edit</a>
+                                                    <a style= "color:white;" href="<?php echo $level.pages_Part."EditStaff.php?id=".$value["staID"]."&id_Login=".$value["LoginID"];?>">Sửa</a>
                                                 </button>
                                                 <button type="button" class="btn btn-danger btn-sm">
-                                                    <a  style= "color:white;" href="<?php echo $level.compPart."deleteStaff.php?id=".$value["staID"]."&id_Login=".$value["LoginID"]; ?>">Delete</a>
+                                                    <a  style= "color:white;" href="<?php echo $level.compPart."deleteStaff.php?id=".$value["staID"]."&id_Login=".$value["LoginID"]; ?>">Khóa</a>
                                                 </button>
                                             </div>
                                         </div>

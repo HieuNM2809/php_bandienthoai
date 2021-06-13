@@ -4,7 +4,7 @@
         private static function connect_DB()
         {
             $host='localhost';
-            $dbname='oneweek';
+            $dbname='php_bandienthoai';
             $us='root';
             $pass='';
         

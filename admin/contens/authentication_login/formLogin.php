@@ -23,20 +23,20 @@
                         <span class="db"><img style ="width:100px"  src="<?php echo $level.images_Part ?>logoVN.png" alt="logo"  /></span>
                     </div>
                     <!-- Form -->
-                    <form class="form-horizontal m-t-20" id="loginform" action="<?php echo $level?>index.php">
+                    <form action="<?php echo $level.compPart?>Login.php" method="POST" class="form-horizontal m-t-20" id="loginform" >
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="">
+                                    <input name="LoginUserName" type="text" class="form-control form-control-lg" placeholder="Tên" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
+                                    <input name="LoginPassword" type="Password" class="form-control form-control-lg" placeholder="Mật khẩu" aria-label="Password" aria-describedby="basic-addon1" required>
                                 </div>
                             </div>
                         </div>
@@ -44,8 +44,8 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <div class="p-t-20">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Lost password?</button>
-                                        <button class="btn btn-success float-right" type="submit">Login</button>
+                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Quên mật khẩu?</button>
+                                        <button name="sub_Login" class="btn btn-success float-right" type="submit">Đăng nhập</button>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div id="recoverform">
                     <div class="text-center">
-                        <span class="text-white">Enter your e-mail address below and we will send you instructions how to recover a password.</span>
+                        <span class="text-white">Nhập địa chỉ e-mail của bạn vào bên dưới và chúng tôi sẽ gửi cho bạn hướng dẫn cách khôi phục mật khẩu.</span>
                     </div>
                     <div class="row m-t-20">
                         <!-- Form -->
@@ -64,13 +64,13 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control form-control-lg" placeholder="Địa chỉ Email" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                             <!-- pwd -->
                             <div class="row m-t-20 p-t-20 border-top border-secondary">
                                 <div class="col-12">
-                                    <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                    <button class="btn btn-info float-right" type="button" name="action">Recover</button>
+                                    <a class="btn btn-success" href="#" id="to-login" name="action">Trở lại đăng nhập</a>
+                                    <button class="btn btn-info float-right" type="button" name="action">Phục hồi</button>
                                 </div>
                             </div>
                         </form>

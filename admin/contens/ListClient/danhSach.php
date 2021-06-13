@@ -7,7 +7,7 @@
                 <div class="col-sm-12 col-md-6">
                     <div id="zero_config_filter" class="dataTables_filter">
                         <label style="display: flex;">
-                            <button type="button" class="btn btn-cyan btn-sm">Search</button>                   
+                            <button type="button" class="btn btn-cyan btn-sm">Tìm kiếm</button>                   
                             <input style="width: 100%; margin-left: 10px;" type="search"
                                 class="form-control form-control-sm" placeholder=""
                                 aria-controls="zero_config">
