@@ -1,7 +1,7 @@
 <?php
-    // $query_sp="SELECT `prodID`, `prodName`, `prodPrice`,
-    //  `prodSL`, `prodInit`, `prodReleaseYear`,
-    //   `prodDescription`, `prodImg`, `prodStatus`, `provID`, `catID` FROM `product` limit 0,9";
+    $query_sp="SELECT `prodID`, `prodName`, `prodPrice`,
+     `prodSL`, `prodInit`, `prodReleaseYear`,
+      `prodDescription`, `prodImg`, `prodStatus`, `provID`, `catID` FROM `product` limit 0,9";
    
    
     // bo cot img 
