@@ -31,7 +31,7 @@ else if(isset($_GET['price3']) && $_GET['price3']!=0)
     $query_price="SELECT COUNT(prodID) AS total FROM product WHERE prodPrice >= $price";
     $total=DP::run_query($query_price,[$price],2);
 }
-else if(!isset($_GET['search'])||!isset($_GET['cat'])||!isset($_GET['price1'])||!isset($_GET['price2'])||!isset($_GET['price3']) || $_GET['cat']==0)
+else if(!isset($_GET['search']) && !isset($_GET['cat']) || $_GET['cat']==0)
 {
     $query_total="SELECT COUNT(prodID) AS total FROM product";
     $total=DP::run_query($query_total,[],2);   
@@ -42,7 +42,7 @@ if($total!=null && count($total)>0)
 {
     $number_product=$total[0]['total'];
 }
-    $page=ceil($number_product/9);
+$page=ceil($number_product/9);
 
 $current_page=1;
 if(isset($_GET['page']))
@@ -50,4 +50,5 @@ if(isset($_GET['page']))
     $current_page=$_GET['page'];
 }
 $index=($current_page-1)*9;
+
 ?>

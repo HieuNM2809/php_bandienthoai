@@ -2,7 +2,13 @@
         <!-- ============================================================== -->
         <!-- Charts pages  -->
         <!-- ============================================================== -->
-        <div class="card">
+        <style>
+        .activePage{
+            background-color:#27a9e3;
+            color:white;
+        }
+        </style>    
+        <div class="card" id="lstChart">
             <div class="card-body">
                 <div class="table-responsive">
                     <div id="zero_config_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">                       
@@ -64,7 +70,7 @@
                                             <th class="sorting"  rowspan="1" colspan="1" style="width: 37px;">Thành tiền</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody >
                                         <?php
                                          foreach( $lstCharts as $value){
                                         ?>
@@ -95,97 +101,31 @@
                 </div>
         
             </div>
-        </div>
-
-
-
-
-
-
-
-
-
-     <!-- Chia trang rồi  -->
-        <!-- <div class="row">
-            <div class="col-sm-12">
-                <table id="zero_config" class="table table-striped table-bordered dataTable" role="grid"
-                    aria-describedby="zero_config_info">
-                    <thead>
-                        <tr role="row">
-                            <th class="sorting_asc"rowspan="1"colspan="1" style="width: 126.333px;"> ID</th>
-                            <th class="sorting_asc"  rowspan="1" colspan="1" style="width: 126.333px;">Tên</th>
-                            <th class="sorting"  rowspan="1" colspan="1"  style="width: 207.667px;">Giá</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 90.3333px;">Số lượng</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 37px;">Ngày bán</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 37px;">Thành tiền</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $i = 0;
-                        if(count($lstCharts) == 0 ){echo "<h4>Không có sản phẩm nào !!!!";};
-                            foreach( $lstCharts as $value){
-                                if( $i == 0 ){
-                        ?>
-                            <tr role="row" class="odd">
-                                <td><?php echo $value["prodID"] ?></td>
-                                <td class="sorting_1"><?php echo $value["prodName"] ?></td>
-                                <td><?php echo number_format($value["prodPrice"])." đ"; ?></td>
-                                <td><?php echo $value["prodStatus"] ?></td>
-                                <td><?php echo $value["prodReleaseYear"] ?></td>
-                                <td><?php echo $value["infoOrderSL"] ?></td>
-                            </tr>
-                            <?php
-                                $i ==1;}else {
-                            ?>                    
-                            <tr role="row" class="even">
-                                <td><?php echo $value["prodID"] ?></td>
-                                <td class="sorting_1"><?php echo $value["prodName"] ?></td>
-                                <td><?php echo $value["prodPrice"] ?></td>
-                                <td><?php echo $value["prodStatus"] ?></td>
-                                <td><?php echo $value["prodReleaseYear"] ?></td>
-                                <td><?php echo $value["infoOrderSL"] ?></td>
-                            </tr>
-                        <?php $i==0; }} ?>
-                    </tbody>
-
-                    <tfoot>
-                        <tr role="row">
-                            <th class="sorting_asc"rowspan="1"colspan="1" style="width: 126.333px;"> ID</th>
-                            <th class="sorting_asc"  rowspan="1" colspan="1" style="width: 126.333px;">Tên</th>
-                            <th class="sorting"  rowspan="1" colspan="1"  style="width: 207.667px;">Giá</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 90.3333px;">Số lượng</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 37px;">Ngày bán</th>
-                            <th class="sorting"  rowspan="1" colspan="1" style="width: 37px;">Thành tiền</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-5">
-                <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite"></div>
-            </div>
-            <div class="col-sm-12 col-md-7">
-                <div style="display: flex; justify-content: flex-end;" class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous " id="zero_config_previous"><a
-                                href="<?php $i =1; if(isset($_GET['pageCharts'])) {echo "Charts.php?pageCharts=".$_GET['pageCharts']-1; }else {echo "Charts.php?pageCharts=".$i-1;}?>" aria-controls="zero_config" data-dt-idx="0" tabindex="0"
-                                class="page-link <?php if(isset($_GET['pageCharts']) && $_GET['pageCharts'] <= 1){ echo "disable";} ?>">Trước</a></li>
-                        <li class="paginate_button page-item <?php if(isset($_GET['pageCharts'])) { if($_GET['pageCharts'] == 1){ echo "active";}}?>"><a href="Charts.php?pageCharts=1" aria-controls="zero_config"
-                                data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item <?php if(isset($_GET['pageCharts'])) { if($_GET['pageCharts'] == 2){ echo "active";}} ?>"><a href="Charts.php?pageCharts=2" aria-controls="zero_config"
-                                data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                        <li class="paginate_button page-item <?php if(isset($_GET['pageCharts'])) { if($_GET['pageCharts'] == 3){ echo "active";}} ?>"><a href="Charts.php?pageCharts=3" aria-controls="zero_config"
-                                data-dt-idx="3" tabindex="0"  class="page-link">3</a></li>
-                        <li class="paginate_button page-item <?php if(isset($_GET['pageCharts'])) { if($_GET['pageCharts'] == 4){ echo "active";}} ?>"><a href="Charts.php?pageCharts=4" aria-controls="zero_config"
-                                data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                        
-                        <li class="paginate_button page-item next" id="zero_config_next">
-                        <a href="<?php $i =1; if(isset($_GET['pageCharts'])) {echo "Charts.php?pageCharts=".$_GET['pageCharts']+1; }else {echo "Charts.php?pageCharts=".$i+1;}?>"
-                                aria-controls="zero_config" data-dt-idx="7" tabindex="0"
-                                class="page-link <?php if(isset($_GET['pageCharts']) && $_GET['pageCharts'] >= 4){ echo "disable";} ?>">Tiếp</a></li>
-                    </ul>
+            <div class="row mb-3">
+                <div class="col-12 d-flex">
+                        <ul class="pagination " style="margin:auto;">
+                            <?php  for( $i=0 ; $i< ceil(count($countlst)/5) ;$i++){
+                            ?>
+                                <li onclick="page('<?php echo $i*5; ?>','<?php echo ceil(count($countlst)/5); ?>', '<?php echo $i?>');"class="page-item page-link"><?php echo $i+1; ?></li>
+                            <?php } ?>
+                        </ul>
                 </div>
             </div>
-        </div>         -->
+        </div>
+        <script>
+            function page(page, sumRow, check){
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("lstChart").innerHTML =
+                    this.responseText;
+                    }
+                };
+                var url = "../api/Chart_chiatrang.php?sta=" + page +"&sumRow="+ sumRow +"&check="+check;
+                xhttp.open("GET", url);
+                xhttp.send();
+            }
+        
+        </script>
+
+        

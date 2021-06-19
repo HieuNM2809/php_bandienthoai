@@ -45,13 +45,18 @@ if($_REQUEST['suserLogin']){
 
             $insStaff = DP::run_query($strinsStaff,$paranstaff,   1);
             if($insLogin == true && $insStaff  ==true){  
-                echo "<h1>Đã thêm nhân viên thành công</h1>";
+                echo '<script language="javascript">';
+                echo 'alert("Đã thêm nhân viên thành công");';
+                echo ' window.location="../pages/CreateStaff.php";';
+                echo '</script>';
             }
         }else{
-            echo "</br><h1>Thêm thất bại</h1>";
+            echo '<script language="javascript">';
+            echo 'alert("Thêm nhân viên thất bại");';
+            echo ' window.location="../pages/CreateStaff.php";';
+            echo '</script>';
         }
 }else{
     header("location:../pages/CreateStaff.php");
 } 
 ?>
- <div style="text-align:center;"><a href="../pages/CreateStaff.php">Quay về</a></div>

@@ -13,45 +13,36 @@
                             <th scope="col">Giá</th>
                             <th scope="col">Số Lượng</th>
                             <th scope="col">Tổng Tiền</th>
-                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                          foreach( $_SESSION['cart'] as $item){?>
                         <tr>
-                            <form action="<?php echo $level."pages/cart.php";?>" method="get">
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                        </div>
-                                        <div class="media-body">
-                                            <p><?php echo $item['name'];?></p>
-                                        </div>
+                            <td>
+                                <div class="media">
+                                    <div class="d-flex">
                                     </div>
-                                </td>
-                                <td>
-                                    <h5><?php echo number_format($item['dongia'],0)."VND";?></h5>
-                                </td>
-                                <td>
-
-                                    <input type="number" name="soluong" id="" value="<?php echo $item['soluong'];?>"
-                                        style="width:4vw;">
-                                </td>
-                                <td>
-                                    <h5>
-                                        <?php   
+                                    <div class="media-body">
+                                        <p><?php echo $item['name'];?></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h5><?php echo number_format($item['dongia'],0)."VND";?></h5>
+                            </td>
+                            <td>
+                                <div class="product_count">
+                                    <span class="input-number-decrement"> <i class="ti-minus"></i></span>
+                                    <?php echo $item['soluong'];?>
+                                    <span class="input-number-increment"> <i class="ti-plus"></i></span>
+                                </div>
+                            </td>
+                            <td>
+                                <h5>
+                                    <?php   
                                    echo number_format($item['soluong']*$item['dongia'],0)."VND";?></h5>
-                                </td>
-                                <td>
-                                    <a href="" style="color:black;">Xóa</a>
-                                </td>
-                                <td>
-                                    <input type="hidden" name="action" value="update">
-                                    <input type="hidden" name="id" value="<?php echo $item['id'];?>">
-                                    <a href="" style="color:black;">Cập nhật</a>
-                                </td>
-                            </form>
+                            </td>
                         </tr>
                         <?php
                             $total+=$item['soluong']*$item['dongia'];
@@ -65,8 +56,6 @@
                             <td>
                                 <h5><?php echo number_format($total,0)."VND";?></h5>
                             </td>
-                            <td></td>
-                            <td></td>
                         </tr>
                     </tbody>
                 </table>

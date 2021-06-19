@@ -38,6 +38,8 @@
                                     aria-describedby="zero_config_info">
                                     <thead>
                                         <tr role="row">
+                                            <th class="sorting"  rowspan="1" colspan="1"
+                                                style="width: 76.6667px;">In</th>
                                             <th class="sorting_asc"  rowspan="1"  colspan="1"  
                                                 style="width: 126.333px;">Tên người mua</th>
                                             <th class="sorting"  rowspan="1" colspan="1" 
@@ -49,7 +51,7 @@
                                             <th class="sorting"  rowspan="1" colspan="1"
                                                 style="width: 37px;">Tên sản phẩm</th>
                                             <th class="sorting"  rowspan="1" colspan="1"
-                                                style="width: 79px;"> Số lượng</th>
+                                                style="width: 20px;"> Số lượng</th>
                                             <th class="sorting"  rowspan="1" colspan="1"
                                                 style="width: 76.6667px;">Giá</th>
                                             <th class="sorting"  rowspan="1" colspan="1"
@@ -60,6 +62,10 @@
                                         <?php foreach( $cli_Ord_Info as $value){
                                         ?>
                                             <tr role="row" class="even">
+                                                <td>
+                                                   <a href="<?php echo $level.pages_Part."detailPurchaseMenu.php?cliID=".$value['cliID']."&ordID=".$value['ordID']."&infoOrderID=".$value['infoOrderID']."&prodID=".$value['prodID'] ?>" 
+                                                           class="btn btn-cyan btn-sm" style="width:30px;">In</a>  
+                                                </td>
                                                 <td class="sorting_1"><?php echo $value['cliName'] ?></td>
                                                 <td><?php echo $value['cliAddress'] ?></td>
                                                 <td><?php echo $value['cliPhone'] ?></td>
@@ -68,8 +74,6 @@
                                                 <td><?php echo $value['infoOrderSL'] ?></td>
                                                 <td><?php echo number_format($value['infoOrderPrice'])."đ"; ?></td>
                                                 <td >
-
-
                                                     <div>
                                                         <div style="display:flex;">
                                                             <select id="selStatus<?php echo $value['ordID'] ?>" name="ordStatus" class=" form-control custom-select " style="width:120px;" >
@@ -99,8 +103,6 @@
                                                             }
                                                         </script>              
                                                     </div>
-
-
                                                    <!-- <form action="<?php echo $level.compPart."Order_Edit_process.php" ?>" method="POST">
                                                         <div style="display:flex;">
                                                             <select name="ordStatus" class=" form-control custom-select " style="width:120px;" >
@@ -119,7 +121,9 @@
 
                                     <tfoot>
                                         <tr>
-                                        <th class="sorting_asc"  rowspan="1"  colspan="1"  
+                                            <th class="sorting"  rowspan="1" colspan="1"
+                                                style="width: 76.6667px;">In</th>    
+                                            <th class="sorting_asc"  rowspan="1"  colspan="1"  
                                                 style="width: 126.333px;">Tên người mua</th>
                                             <th class="sorting"  rowspan="1" colspan="1" 
                                                 style="width: 207.667px;">Địa chỉ</th>
@@ -130,7 +134,7 @@
                                             <th class="sorting"  rowspan="1" colspan="1"
                                                 style="width: 37px;">Tên sản phẩm</th>    
                                             <th class="sorting"  rowspan="1" colspan="1"
-                                                style="width: 79px;"> Số lượng</th>
+                                                style="width: 20px;"> Số lượng</th>
                                             <th class="sorting"  rowspan="1" colspan="1"
                                                 style="width: 76.6667px;">Giá</th>
                                             <th class="sorting"  rowspan="1" colspan="1"

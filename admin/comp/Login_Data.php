@@ -13,4 +13,14 @@
     // print_r( $staInfoLogin);
     // echo "</pre>";
 
+
+    // cái chuông 
+    // hiện số lượng đơn mới 
+    $lstProNew = DP::run_query('select * from orderr where ordStatus = -2', [] , 2);
+    $countNew= count($lstProNew);
+
+    //hiện danh sách hóa đơn mới 
+    $strOrderNew ='select * from orderr o , information_order i, client c ,product p WHERE o.ordID = i.ordID and o.cliID = c.cliID
+    and i.prodID = p.prodID and o.ordStatus =-2 ';
+    $lstOrderNew = DP::run_query($strOrderNew ,[],2);
 ?>

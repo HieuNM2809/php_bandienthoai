@@ -53,6 +53,15 @@
         require_once ($level.listPurchaseMenu_Part."breadcrumb.php");
         require_once ($level.listPurchaseMenu_Part."danhSach.php");
      }else if($IsdetailPurchaseMenu ==true){
+
+         if( !isset($_GET['cliID']) || !isset($_GET['ordID']) || !isset($_GET['infoOrderID']) ) {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Hãy chọn một hóa đơn để in");';
+            echo ' window.location="ListPurchaseMenu.php";';
+            echo '</script>';
+         }
+
         require_once ($level.detailPurchaseMenu_Part."breadcrumb.php");
         require_once ($level.detailPurchaseMenu_Part."thongTinDonMua.php");
      }else if($IsEditStaff ==true){

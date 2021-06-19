@@ -11,7 +11,7 @@
                         <div class="card">
                             <form action="<?php echo $level."comp/Product_Insert.php"?>"  method="POST" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="card-body">
-                                    <h4 class="Radio Buttonscard-title">Thông tin dơn nhập</h4>
+                                    <h4 class="Radio Buttonscard-title">Thông tin đơn nhập</h4>
                                     <div class="form-group row">
                                         <label for="fname" class="col-sm-3 text-right control-label col-form-label">Tên</label>
                                         <div class="col-sm-9">
@@ -21,19 +21,19 @@
                                     <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Giá</label>
                                         <div class="col-sm-9">
-                                            <input type="number" class="form-control" name="prodPrice" required placeholder="Giá">
+                                            <input type="number" class="form-control" name="prodPrice" min="1" required placeholder="Giá">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Số lượng</label>
                                         <div class="col-sm-9">
-                                            <input type="number" class="form-control" name="prodSL" required placeholder="Số lượng">
+                                            <input type="number" class="form-control" name="prodSL" min="1" required placeholder="Số lượng">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Năm phát hành</label>
                                         <div class="col-sm-9">
-                                            <input type="number" class="form-control" name="prodReleaseYear" placeholder="Năm phát hành">
+                                            <input type="number" class="form-control" name="prodReleaseYear" min="1" placeholder="Năm phát hành">
                                         </div>
                                     </div>
                                     <div class="form-group row">

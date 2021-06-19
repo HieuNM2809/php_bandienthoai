@@ -5,14 +5,16 @@
                 <div class=" col-md-6">  
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <div id="zero_config_filter" class="dataTables_filter">
+
+                <!-- Phần tìm kiếm -->
+                    <!-- <div id="zero_config_filter" class="dataTables_filter">
                         <label style="display: flex;">
                             <button type="button" class="btn btn-cyan btn-sm">Tìm kiếm</button>                   
                             <input style="width: 100%; margin-left: 10px;" type="search"
                                 class="form-control form-control-sm" placeholder=""
                                 aria-controls="zero_config">
                         </label>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-12">
                     <div class="card">   

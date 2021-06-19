@@ -28,14 +28,14 @@
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?php echo $level.images_Part ?>logo-icon.png"alt="homepage" class="light-logo" />
+                            <img src="<?php echo $level.images_Part ?>OneWeek1.png" style="width: 47px;" alt="homepage" class="light-logo" />
                            
                         </b>
                         <!--End Logo icon -->
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="<?php echo $level.images_Part ?>logo-text.png" alt="homepage" class="light-logo" />
+                             <img src="<?php echo $level.images_Part ?>admin1.png" alt="homepage" class="light-logo" />
                             
                         </span>
                         <!-- Logo icon -->
@@ -84,7 +84,7 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li  class="nav-item search-box d-none"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search position-absolute">
                                 <input type="text" class="form-control" placeholder="Tìm kiếm và nhấn Enter"> <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
@@ -97,14 +97,79 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
+                        <style>
+                            .noti{
+                                position: relative;
+                                top: -39px;
+                                right: -20px;
+                            }
+                        </style>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href=""
+                             data-toggle="dropdown" aria-haspopup="true" 
+                             aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>
+                             <h4 class="noti" id="noti">
+                                 <?php if($countNew == 0 ) echo ""; else echo $countNew;  ?>
+                             </h4>
                             </a>
-                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Có đơn nhập film mới</a>
-                                <a class="dropdown-item" href="#">Có đơn mua hàng mới</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Có nhân viên mới</a>
+                           
+                             <div style="left:-400px" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">
+                                   <table class="table table-striped">
+                                       <thead>
+                                            <tr>
+                                                <th>Tên</th>
+                                                <th>Số lượng</th>
+                                                <th>Xác nhận</th>
+                                                <th>Hủy</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="lstOrderNew">
+                                            <?php foreach( $lstOrderNew as $value){
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $value['prodName'] ?></td>
+                                                    <td><?php echo $value['infoOrderSL'] ?></td>
+                                                    <td><button onclick="xacNhanHoaDon('<?php  echo $value['ordID'] ?>');" type="button" class="btn btn-primary">Xác nhận</button></td>
+                                                    <td><button onclick="huyHoaDon('<?php  echo $value['ordID'] ?>');" type="button" class="btn btn-danger">Hủy</button></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <script>
+                                        function xacNhanHoaDon(ordID) {
+                                            // trừ ở thông báo xuống 1
+                                            document.getElementById("noti").innerHTML= Number($('#noti').text() )-1;
+                                            const xhttp = new XMLHttpRequest();
+                                            xhttp.onreadystatechange = function() {
+                                                if (this.readyState == 4 && this.status == 200) {
+                                                document.getElementById("lstOrderNew").innerHTML =
+                                                this.responseText;
+                                                }
+                                            };
+                                            var url = "../api/xacNhanDonHang.php?ordID=" + ordID;
+                                            xhttp.open("GET",url);
+                                            xhttp.send();
+                                        }
+                                        function huyHoaDon(ordID) {
+
+                                            document.getElementById("noti").innerHTML= Number($('#noti').text() )-1;
+                                            const xhttp = new XMLHttpRequest();
+                                            xhttp.onreadystatechange = function() {
+                                                if (this.readyState == 4 && this.status == 200) {
+                                                document.getElementById("demo").innerHTML =
+                                                this.responseText;
+                                                }
+                                            };
+                                            var url = "../api/huyDonHang.php?ordID=" + ordID;
+                                            xhttp.open("GET",url);
+                                            xhttp.send();
+                                        }
+                                            
+                                    </script>
+                                   
+                                </a>
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -123,7 +188,7 @@
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i><?php echo  $staInfoLogin[0]['staName'] ?></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i>Thiết lập tài khoản</a>
+                                <a class="dropdown-item" href="<?php echo $level.pages_Part."EditStaff.php?id=".$staInfoLogin[0]['staID']."&id_Login=".$staInfoLogin[0]['LoginID'] ?>"><i class="ti-settings m-r-5 m-l-5"></i>Thiết lập tài khoản</a>
                                 <div class="dropdown-divider"></div> 
                                 <a class="dropdown-item" href="<?php echo $level.compPart."LogOut.php"?>" ><i class="fa fa-power-off m-r-5 m-l-5"></i> Đăng xuất</a>
                                 <!-- <div class="dropdown-divider"></div>
