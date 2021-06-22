@@ -3,7 +3,10 @@
 if(isset($_GET['search']))
 {
     $search=$_GET['search'];
-    $query_total_search="SELECT COUNT(prodID) AS total FROM product WHERE `prodName` LIKE '%".$search."%'";
+    $query_total_search="SELECT product.prodID,prodName, prodPrice, prodSL, prodInit, prodReleaseYear,
+    prodDescription, prodStatus, provID, catID,images.img1
+    FROM product 
+    JOIN images ON product.prodID = images.prodID WHERE `prodName` LIKE '%".$search."%'";
     $total=DP::run_query($query_total_search,[$search],2);
 }
 //PHÂN LOẠI

@@ -26,59 +26,21 @@
                             <!--Slides-->
                             <div class="carousel-inner product-links-wap" role="listbox">
 
+
                                 <!--First slide-->
                                 <div class="carousel-item active">
                                     <div class="row">
+                                        <?php foreach($sanpham as $item){?>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_01.png";?>"
+                                                    src="<?php echo $level.img_path.$item['img1'];?>"
                                                     alt="Brand Logo"></a>
                                         </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_02.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_03.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_04.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
+                                        <?php}?>
                                     </div>
                                 </div>
                                 <!--End First slide-->
 
-                                <!--Second slide-->
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_01.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_02.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_03.png";?>"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo $level.img_path."brand_04.png";?>"
-                                                    alt=" Brand Logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Second slide-->
 
 
 

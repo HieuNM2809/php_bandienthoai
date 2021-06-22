@@ -34,7 +34,7 @@
                         <tr>
                             <form action="<?php echo $level."pages/cart.php";?>" method="get">
                                 <td>
-                                    <img src="<?php echo $level.img_path.$item['img'];?>" alt=""
+                                    <img src="<?php echo $level.img_path.$item['img1'];?>" alt=""
                                         style="width:10vw; height:10vw">
                                 </td>
                                 <td>

@@ -12,7 +12,7 @@
             <div class="p-2 pb-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="<?php echo $level.img_path."asus-1.jpg"?>">
+                        <img class="card-img rounded-0 img-fluid" src="<?php echo $level.img_path.$item['img1'];?>">
                         <div
                             class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                             <ul class="list-unstyled">
