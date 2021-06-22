@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="zxx" style="overflow-x:hidden;">
 
 <head>
     <meta charset="utf-8">
@@ -29,5 +29,7 @@
     <link rel="stylesheet" href="<?php echo $level.css_path."fontawesome.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."fontawesome.min.css";?>">
     <link rel="stylesheet" href="<?php echo $level.css_path."fontgoogle.css";?>">
+
+
 
 </head>

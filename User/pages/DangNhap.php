@@ -3,10 +3,10 @@
     $isIndex=false;
     $isMuaHang=false;
     $isChiTietSanPham=false;
-    $isCart=true;
+    $isCart=false;
     $isLienHe=false;
     $isThongTin=false;
-    $isDangNhap=false;
+    $isDangNhap=true;
     $isDangKy=false;
     $isThongTinTK=false;
     require_once($level."layout.php");
