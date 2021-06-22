@@ -6,14 +6,15 @@
                 <div class=" col-md-6">  
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <div id="zero_config_filter" class="dataTables_filter">
+                <!-- // Phần tìm kiếm  -->
+                    <!-- <div id="zero_config_filter" class="dataTables_filter">
                         <label style="display: flex;">
                             <button type="button" class="btn btn-cyan btn-sm">Tìm kiếm</button>                   
                             <input style="width: 100%; margin-left: 10px;" type="search"
                                 class="form-control form-control-sm" placeholder=""
                                 aria-controls="zero_config">
                         </label>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-12">
                     <div class="card">   
@@ -25,7 +26,7 @@
                                    <div class="d-flex flex-row comment-row m-t-0">
                                         <div class="comment-text w-50">
                                             Tên : <h6 class="font-medium"><?php echo $value["staName"] ?></h6>
-                                            Ngày sinh: <span class="m-b-15 d-block text-medium font-medium"><?php $value["staBirthday"];?></span> 
+                                            Ngày sinh: <span class="m-b-15 d-block text-medium font-medium"><?php echo $value["staBirthday"];?></span> 
                                             Địa chỉ:<span class="m-b-15 d-block font-medium font-medium"><?php echo $value["staAddress"] ?></span>
                                             Số điện thoại:<span class="m-b-15 d-block font-medium"><?php echo $value["staPhone"] ?></span>
                                             Giới tính: <span class="m-b-15 d-block font-medium">

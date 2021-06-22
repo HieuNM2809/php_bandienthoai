@@ -19,7 +19,7 @@ if($_REQUEST['cliID']){
 
     if($result == true ){
         echo '<script language="javascript">';
-        echo 'alert("Sửa nhân viên thành công");';
+        echo 'alert("Sửa khách hàng thành công");';
         echo ' window.location="../pages/ListClient.php";';
         echo '</script>';
     }else{

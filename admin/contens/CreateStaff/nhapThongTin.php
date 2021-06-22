@@ -14,13 +14,29 @@
                                 <div class="form-group row">
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">Tên đăng nhập</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="suserLogin"  required placeholder="VD: user123">
-                                    </div>
+                                        <input id="txtUser" type="text" onkeyup="checkUser();" class="form-control" name="suserLogin"  autocomplete="off" required placeholder="VD: user123">
+                                        <div id="messageUser" style="color:red;"></div> 
+                                   </div>
                                 </div>
+                                <script>
+                                    function checkUser(){
+                                        var us = $('#txtUser').val();
+
+                                        const xhttp = new XMLHttpRequest();
+                                        xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) {
+                                            document.getElementById("messageUser").innerHTML = this.responseText;
+                                            }
+                                        };
+                                        var url = "../api/checkUser.php?us="+us;
+                                        xhttp.open("GET", url);
+                                        xhttp.send();
+                                    }
+                                </script>
                                 <div class="form-group row">
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">Mật khẩu đăng nhập</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="spass" required placeholder="VD: pass123">
+                                        <input type="text" class="form-control" name="spass"  autocomplete="off"  required placeholder="VD: pass123">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -32,7 +48,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 text-right control-label col-form-label">Ngày sinh</label>
                                     <div class="col-sm-9 input-group">
-                                        <input type="text" name="sdate" class="form-control mydatepicker" required placeholder="yyyy/MM/dd">
+                                        <input type="text" name="sdate" class="form-control mydatepicker" required placeholder="yyyy-MM-dd">
                                         <div class="input-group-append">
                                             <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                         </div>
@@ -77,7 +93,7 @@
                                 <div class="form-group row">
                                     <label for="email1" class="col-sm-3 text-right control-label col-form-label">Lương</label>
                                     <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="email1" required name="ssalary" placeholder="VD:10.000.000">
+                                        <input type="number" class="form-control" id="email1" min="1" required name="ssalary" placeholder="VD:10.000.000">
                                     </div>
                                 </div>
                                 <div class="form-group row">

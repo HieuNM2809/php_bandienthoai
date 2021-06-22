@@ -4,6 +4,7 @@
         <div class="row text-left p-2 pb-3">
             <h4>Related Products</h4>
         </div>
+
         <!--Start Carousel Wrapper-->
         <div id="carousel-related-product">
             <?php foreach($lst_sp as $item){

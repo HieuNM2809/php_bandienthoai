@@ -10,8 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="short icon" type="image/png" sizes="16x16" href="<?php echo $level.images_Part ?>logoVN.png">
-    <title>Adminitrator -VietnamStar </title>
+    <link rel="short icon" type="image/png" sizes="16x16" href="<?php echo $level.images_Part ?>iconLogo.png">
+    <title>Adminitrator - OneWeek </title>
     <!-- Custom CSS -->
     <link href="<?php echo $level?> assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <!-- Custom CSS -->

@@ -88,6 +88,6 @@
      //================================================
     //==========Start  lấy dư liệu Provided: 
     //================================================
-    $listProvided = DP::run_query('select * from provided where provStatus = 1',[],2);
+    $listProvided = DP::run_query('select * from provided where provStatus = 1 order by provID desc',[],2);
     
 ?>

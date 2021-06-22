@@ -30,7 +30,7 @@
                                 <div class="form-group row">
                                     <label for="fname" class="col-sm-3 text-right control-label col-form-label">Mã bưu điện</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="provPostOfficeCode" required>
+                                        <input type="text" class="form-control"  name="provPostOfficeCode" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">

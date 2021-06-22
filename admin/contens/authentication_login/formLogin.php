@@ -20,7 +20,7 @@
             <div class="auth-box bg-dark border-top border-secondary">
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img style ="width:100px"  src="<?php echo $level.images_Part ?>logoVN.png" alt="logo"  /></span>
+                        <span class="db"><img style ="width:100px"  src="<?php echo $level.images_Part ?>OneWeek1.png" alt="logo"  /></span>
                     </div>
                     <!-- Form -->
                     <form action="<?php echo $level.compPart?>Login.php" method="POST" class="form-horizontal m-t-20" id="loginform" >
@@ -44,8 +44,8 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <div class="p-t-20">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Quên mật khẩu?</button>
-                                        <button name="sub_Login" class="btn btn-success float-right" type="submit">Đăng nhập</button>
+                                        <!-- <button class="btn btn-info d-none" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Quên mật khẩu?</button> -->
+                                        <button name="sub_Login" class="btn btn-success float-right w-100" type="submit">Đăng nhập</button>
                                     </div>
                                 </div>
                             </div>
