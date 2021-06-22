@@ -9,7 +9,7 @@
                 $con = new PDO ("mysql:host=$host;dbname=$dbname;charset=utf8mb4",$us,$pass);
                 return $con; 
             }
-            catch(DPOException $e){
+            catch(PDOException $e){
                 echo "Error: " . $e->getMessage();
                 return NULL;
             }

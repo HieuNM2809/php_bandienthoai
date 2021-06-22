@@ -148,7 +148,7 @@
                                                 this.responseText;
                                                 }
                                             };
-                                            var url = "../api/xacNhanDonHang.php?ordID=" + ordID;
+                                            var url = "<?php echo $level; ?>api/xacNhanDonHang1.php?ordID=" + ordID;
                                             xhttp.open("GET",url);
                                             xhttp.send();
                                         }
@@ -162,7 +162,7 @@
                                                 this.responseText;
                                                 }
                                             };
-                                            var url = "../api/huyDonHang.php?ordID=" + ordID;
+                                            var url = "<?php echo $level; ?>api/huyDonHang1.php?ordID=" + ordID;
                                             xhttp.open("GET",url);
                                             xhttp.send();
                                         }
