@@ -2,7 +2,7 @@
 <section class="py-5">
     <div class="container">
         <div class="row text-left p-2 pb-3">
-            <h4>Related Products</h4>
+            <h4 class="text-success">Sản Phẩm Khác</h4>
         </div>
         <!--Start Carousel Wrapper-->
         <div id="carousel-related-product">
@@ -11,20 +11,29 @@
             <div class="p-2 pb-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="<?php echo $level.img_path."asus-1.jpg"?>">
+                        <img class="card-img rounded-0 img-fluid" src="<?php echo $level.img_path.$item['img1'];?>">
                         <div
                             class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                             <ul class="list-unstyled">
-                                <li><a class="btn btn-success text-white" href="shop-single.html"><i
-                                            class="far fa-heart"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                            class="far fa-eye"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
-                                            class="fas fa-cart-plus"></i></a></li>
+                                <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2"
+                                        href="<?php echo $level."pages/ChiTietSanPham.php?id=".$item['prodID'];?>"><i
+                                            class="far fa-eye"></i></a>
+                                </li>
+                                <li><a class="btn btn-success text-white mt-2" href="<?php 
+                                            if(isset($_SESSION['user']))
+                                            {
+                                                echo $level."pages/cart.php?id=".$item['prodID'];
+                                            }
+                                            else
+                                            {
+                                                echo $level.pages_path."DangNhap.php";
+                                            }
+                                            ?>"><i class="fas fa-cart-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body  text-center">
                         <a href="shop-single.html" class="h3 text-decoration-none"><?php echo $item['prodName'];?></a>
                         <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                             <li class="pt-2">

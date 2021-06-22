@@ -49,13 +49,12 @@
                                 <div class="row">
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
-                                            <li class="list-inline-item">Màu :
+                                            <li class="list-inline-item">
                                                 <input type="hidden" name="product-size" id="product-size" value="S">
                                             </li>
-                                            <li class="list-inline-item"><span class="btn btn-warning btn-size"></span>
+                                            <li class="list-inline-item">
                                             </li>
-                                            <li class="list-inline-item"><span
-                                                    class="btn btn-secondary btn-size"></span>
+                                            <li class="list-inline-item">
                                             </li>
                                         </ul>
                                     </div>
@@ -66,9 +65,17 @@
                                             href="<?php echo $level."pages/MuaHang.php";?>">Tiếp Tục Mua Hàng</a>
                                     </div>
                                     <div class="col d-grid">
+                                        <?php 
+                                            if(isset($_SESSION['user']))
+                                            {?>
                                         <input type="hidden" name="id" value="<?php echo $key['prodID'];?>">
                                         <button type="submit" class="btn btn-success btn-lg" name="">MUA
                                             NGAY</button>
+                                        <?php }else{
+                                                echo "<script>";
+                                                echo "window.location='../pages/Dangnhap.php'";
+                                                echo "</script>";
+                                            }?>
                                     </div>
                                 </div>
                             </div>

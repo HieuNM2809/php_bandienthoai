@@ -1,9 +1,6 @@
 <?php
-    $query_sp="SELECT `prodID`, `prodName`, `prodPrice`,
-     `prodSL`, `prodInit`, `prodReleaseYear`,
-      `prodDescription`, `prodImg`, `prodStatus`, `provID`, `catID` FROM `product` limit 0,9";
-   
-   
+    $query_sp="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
+    JOIN `images` ON product.prodID = images.prodID limit 0,9";
     // bo cot img 
 //    $query_sp="select `prodID`, `prodName`, `prodPrice`,
 //    `prodSL`, `prodInit`, `prodReleaseYear`,

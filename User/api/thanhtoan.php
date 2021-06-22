@@ -7,12 +7,12 @@
     
     if($action=='insert')
     {
-        
         $insert_HD=DP::run_query("INSERT INTO `orderr`(`ordDate`,`ordBill`, `ordStatus`
         , `cliID`)
         VALUES (DATE(NOW()),1,-2,?)",[$id],1);
     
         $query_HD=DP::run_query("SELECT MAX(ordID) FROM `orderr`",[],2);
+        
         foreach($query_HD as $key =>$h)
         {
             foreach($_SESSION['cart'] as $item => $value)

@@ -43,10 +43,7 @@
                             <a class="h3 text-dark text-decoration-none mr-3" href="<?php echo "?cat=2"?>">Cảm Ứng</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=3"?>">Bàn Phím</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=1"?>">Gamming</a>
+                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=1"?>">Bàn Phím</a>
                         </li>
                     </ul>
                 </div>
@@ -76,11 +73,19 @@
                                 <ul class="list-unstyled">
                                     <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a>
                                     </li>
-                                    <li><a class="btn btn-success text-white mt-2" href="#"><i
-                                                class="far fa-eye"></i></a></li>
                                     <li><a class="btn btn-success text-white mt-2"
-                                            href="<?php echo $level."pages/cart.php?id=".$prod['prodID'];?>"><i
-                                                class="fas fa-cart-plus"></i></a>
+                                            href="<?php echo $level."pages/ChiTietSanPham.php?id=".$prod['prodID'];?>"><i
+                                                class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="<?php 
+                                            if(isset($_SESSION['user']))
+                                            {
+                                                echo $level."pages/cart.php?id=".$prod['prodID'];
+                                            }
+                                            else
+                                            {
+                                                echo $level.pages_path."DangNhap.php";
+                                            }
+                                            ?>"><i class="fas fa-cart-plus"></i></a>
                                     </li>
                                 </ul>
                             </div>
