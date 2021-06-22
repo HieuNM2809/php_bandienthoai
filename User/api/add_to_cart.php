@@ -16,7 +16,7 @@
         
         $action = (isset($_GET['action']))?$_GET['action']:'add';
         $soluong= (isset($_GET['soluong']))?$_GET['soluong']:1;
-
+        
         if($action=='add')
         {
             if(isset($_SESSION['cart'][$id]))
@@ -50,14 +50,18 @@
         }
         if($action == 'insert')
         {
-            //foreach($_SESSION['cart'][$id] as $item)
-            //  $masp=$_SESSION['cart']['id'];
-            //  $name=$_SESSION['cart']['name'];
-            //  $hinh=$_SESSION['cart']['img'];
-            //  $dongia=$_SESSION['cart']['dongia'];
-            //  $donvi=$_SESSION['cart']['donvi'];
-            //  $soluong=$_SESSION['cart']['soluong'];
-            //  $mota=$_SESSION['cart']['mota'];
+            // foreach($_SESSION['cart'] as $item)
+            // {
+            //     echo "Thành Công";
+            //     $masp=$_SESSION['cart']['id'];
+            //     $name=$_SESSION['cart']['name'];
+            //     $hinh=$_SESSION['cart']['img'];
+            //     $dongia=$_SESSION['cart']['dongia'];
+            //     $donvi=$_SESSION['cart']['donvi'];
+            //     $soluong=$_SESSION['cart']['soluong'];
+            //     $mota=$_SESSION['cart']['mota'];
+            // }
+            
             //$query="INSERT INTO `cart`(`cartID`, `cartName`, `cartImg`, `cartPrice`, `cartInit`, `cartQuantity`, `cartStatus`)
             //VALUES ('$masp','$name','$hinh','$dongia','$donvi','$soluong','1')";
             //$add=DP::run_query($query,[$masp,$name,$dongia,$soluong,$donvi,$mota],2);

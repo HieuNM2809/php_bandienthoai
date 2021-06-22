@@ -90,12 +90,13 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="checkout_btn_inner float-right">
+                <div class="checkout_btn_inner float-right" style="margin-left: 60vw;">
                     <a class="btn btn-success" href="<?php echo $level."pages/MuaHang.php";?>">Tiếp Tục Mua Hàng</a>
-                    <a class="btn btn-success" href="<?php echo $level.pages_path."cart.php?action=insert";?>">Thanh
+                    <a class="btn btn-success" href="<?php echo $level."pages/cart.php?action=insert";?>">Thanh
                         Toán</a>
                 </div>
             </div>
+            <?php require_once($level.api_path."thanhtoan.php");?>
             <?php }?>
         </div>
 </section>
