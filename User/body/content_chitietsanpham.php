@@ -14,38 +14,37 @@
                 </div>
                 <!-- col end -->
                 <div class="col-lg-7 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <h1 class="h2"><?php echo $key['prodName'];?></h1>
-                            <p class="h3 py-2"><?php echo number_format($key['prodPrice']).$key['prodInit'];?></p>
-                            <p class="py-2">
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
-                            </p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Hãng:</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Iphone</strong></p>
-                                </li>
-                            </ul>
+                    <form action="<?php echo $level."pages/cart.php";?>" method="get">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="h2"><?php echo $key['prodName'];?></h1>
+                                <p class="h3 py-2"><?php echo number_format($key['prodPrice']).$key['prodInit'];?></p>
+                                <p class="py-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <h6>Hãng:</h6>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <p class="text-muted"><strong>Iphone</strong></p>
+                                    </li>
+                                </ul>
 
-                            <h6>Mô tả:</h6>
-                            <p><?php echo $key['prodDescription'];?></p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Màu Sắc :</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Đen / Vàng</strong></p>
-                                </li>
-                            </ul>
-                            <form action="" method="GET">
+                                <h6>Mô tả:</h6>
+                                <p><?php echo $key['prodDescription'];?></p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <h6>Số Lượng:</h6>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <input type="number" name="soluong" value="1" style="width:4vw;">
+                                    </li>
+                                </ul>
                                 <input type="hidden" name="product-title" value="Activewear">
                                 <div class="row">
                                     <div class="col-auto">
@@ -60,7 +59,6 @@
                                             </li>
                                         </ul>
                                     </div>
-
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
@@ -68,14 +66,14 @@
                                             href="<?php echo $level."pages/MuaHang.php";?>">Tiếp Tục Mua Hàng</a>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit"
-                                            value="addtocard">Thêm Vào Giỏ Hàng</button>
+                                        <input type="hidden" name="id" value="<?php echo $key['prodID'];?>">
+                                        <button type="submit" class="btn btn-success btn-lg" name="">MUA
+                                            NGAY</button>
                                     </div>
                                 </div>
-                            </form>
-
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
 
             </div>

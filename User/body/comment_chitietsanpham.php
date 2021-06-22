@@ -26,24 +26,6 @@
                         <i style="font-size:15px;color: #5c8284;">
                              Đăng  <?php echo $value['comTime'] ?>h   <?php echo  date('Y-m-d',strtotime($value['comDate']))  ?>
                         </i> 
-                        <?php
-                            if(isset($_SESSION['username'])){
-                                echo '<button type="button" onclick="delComment'.$value['comID'].'()" class="btn btn-danger">Xóa</button>'
-                            ;}
-                         ?> 
-                         <script>
-                            function delComment<?php echo $value['comID']?>() {
-                                var url="../api/chittietsanpham_delete.php?comID="+<?php echo $value['comID']?>+"&prodID="+ <?php echo $value['prodID']?>;  
-                                const xhttp = new XMLHttpRequest();
-                                xhttp.onreadystatechange = function() {
-                                    if (this.readyState == 4 && this.status == 200) {
-                                    document.getElementById("content_conment").innerHTML =  this.responseText;
-                                    }
-                                };
-                                xhttp.open("GET", url);
-                                xhttp.send();
-                            }
-                         </script>
                     </h4>
                     <p>
                         <?php echo $value['comContent'] ?> 
@@ -63,7 +45,6 @@
                 </div> -->
             </div>
         </div>
-
         <!-- ajax -->
         <script>
             function comment() {
@@ -82,7 +63,6 @@
                 }
                 
             }
-           
         </script>
     </div>
 </div>

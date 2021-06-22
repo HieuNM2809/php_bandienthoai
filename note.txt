@@ -1,5 +1,0 @@
--3: đã hủy
--2: chua xác nhận
--1: chưa giao 
-0: đang giao
-1: đã giao

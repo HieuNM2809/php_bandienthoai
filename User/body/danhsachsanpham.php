@@ -43,10 +43,10 @@
                             <a class="h3 text-dark text-decoration-none mr-3" href="<?php echo "?cat=2"?>">Cảm Ứng</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=1"?>">Bàn Phím</a>
+                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=3"?>">Bàn Phím</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=3"?>">Gamming</a>
+                            <a class="h3 text-dark text-decoration-none" href="<?php echo "?cat=1"?>">Gamming</a>
                         </li>
                     </ul>
                 </div>

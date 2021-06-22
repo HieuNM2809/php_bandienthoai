@@ -15,7 +15,6 @@
     {
         require_once($level.head_path."head_index.php");
         require_once($level.head_path."header.php");
-        
         require_once($level.body_path."danhsachsanpham.php");   
         require_once($level.body_path."thuonghieu.php");
     }
