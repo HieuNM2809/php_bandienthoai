@@ -149,7 +149,7 @@
                                 <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Showing 1 to
                                     10 of 57 entries</div>
                             </div> -->
-                            <div class="col-sm-12 col-md-7">
+                            <!-- <div class="col-sm-12 col-md-7">
                                 <div style="display: flex; justify-content: flex-end;" class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
                                     <ul class="pagination">
                                         <li class="paginate_button page-item previous disabled" id="zero_config_previous"><a
@@ -172,7 +172,7 @@
                                                 class="page-link">Next</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

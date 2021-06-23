@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="el-card-content">
                                         <h4 class="m-b-0"><?php echo $value['prodName'] ?></h4>
-                                        <span class="text-muted">
+                                        <span class="text-muted" style="height: 40px;display:block;overflow:hidden;">
                                             <?php echo $value['prodDescription'] ?>
                                         </span><br/>
                                         <span class="text-muted">

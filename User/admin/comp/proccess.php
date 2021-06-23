@@ -43,7 +43,7 @@
     //================================================
     //==========Start  lấy dư liệu List film: 
     //================================================
-    $strQueryFilm ='select * from product pd, images img where pd.prodID = img.prodID and pd.prodStatus = 1';
+    $strQueryFilm ='select * from product pd, images img where pd.prodID = img.prodID and pd.prodStatus = 1 order by pd.prodID desc';
     if( isset($_GET['keyName'])){
         if( $_GET['keyName'] !=""  && $_GET['keyYear'] == "" && $_GET['keyPrice'] == "" ){
             $strQueryFilm ="select * from product pd, images img

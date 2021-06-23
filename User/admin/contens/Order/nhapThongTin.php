@@ -49,7 +49,6 @@
                                             <select name="catID" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
                                                 <option value="1">Điện thoại Phím</option>
                                                 <option value="2">Điện thoại Cảm ứng</option>
-                                                <option value="3">Điện thoại Gaming</option>
                                             </select>
                                         </div>
                                     </div>
