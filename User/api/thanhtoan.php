@@ -22,7 +22,7 @@
                     $soluong=$value['soluong'];
                     $query_CTHD=DP::run_query("INSERT INTO `information_order`
                     (`ordID`, `prodID`, `infoOrderSL`, `infoOrderPrice`, `infoStatus`)
-                    VALUES (?,?,?,?,-2)",[$h['0'],$masp,$soluong,$dongia],1);
+                    VALUES (?,?,?,?,1)",[$h['0'],$masp,$soluong,$dongia],1);
                     if($query_CTHD)
                     {
                         unset($_SESSION['cart'][$masp]);

@@ -5,7 +5,7 @@ if(isset($_GET['cat']) && $_GET['cat']!=0)
     $query_loaisp="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
     JOIN `images` ON product.prodID = images.prodID
     WHERE catID=$cat limit ".$index.",9";
-    $lst_sp=DP::run_query($query_loaisp,[$cat],2);
+    $lst_sp=DP::run_query($query_loaisp,[],2);
 }
 //tìm kiếm theo từ khóa
 else if(isset($_GET['search']))
@@ -14,7 +14,7 @@ else if(isset($_GET['search']))
     $query_search="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
     JOIN `images` ON product.prodID = images.prodID
     WHERE `prodName` LIKE '%".$search."%' limit ".$index.",9";
-    $lst_sp=DP::run_query($query_search,[$search],2);
+    $lst_sp=DP::run_query($query_search,[],2);
 }
 else if(isset($_GET['price1']) && $_GET['price1']!=0)
 {
@@ -22,7 +22,7 @@ else if(isset($_GET['price1']) && $_GET['price1']!=0)
     $query_price="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
     JOIN `images` ON product.prodID = images.prodID 
     WHERE `prodPrice`>= $price limit ".$index.",9";
-    $lst_sp=DP::run_query($query_price,[$price],2);
+    $lst_sp=DP::run_query($query_price,[],2);
 }
 else if(isset($_GET['price2']) && $_GET['price2']!=0)
 {
@@ -30,7 +30,7 @@ else if(isset($_GET['price2']) && $_GET['price2']!=0)
     $query_price="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
     JOIN `images` ON product.prodID = images.prodID
     WHERE `prodPrice`<= $price limit ".$index.",9";
-    $lst_sp=DP::run_query($query_price,[$price],2);
+    $lst_sp=DP::run_query($query_price,[],2);
 }
 else if(isset($_GET['price3']) && $_GET['price3']!=0)
 {
@@ -38,7 +38,7 @@ else if(isset($_GET['price3']) && $_GET['price3']!=0)
     $query_price="SELECT product.prodID,`prodName`, `prodPrice`, `prodSL`, `prodInit`, `prodReleaseYear`, `prodDescription`, `prodStatus`, `provID`, `catID`,images.img1 FROM `product` 
     JOIN `images` ON product.prodID = images.prodID 
     WHERE `prodPrice`<= $price limit ".$index.",9";
-    $lst_sp=DP::run_query($query_price,[$price],2);
+    $lst_sp=DP::run_query($query_price,[],2);
 }
 else if(!isset($_GET['search']) && !isset($_GET['cat']) || $_GET['cat']==0)
 {

@@ -9,25 +9,17 @@
         $query_dangnhap=DP::run_query("SELECT COUNT(*) FROM `client` WHERE cliUser=?",[$taikhoan],2);
         $dangnhap=DP::run_query("SELECT * FROM `client` WHERE cliUser=?",[$taikhoan],2);
 
-        
-        
-        
-        //var_dump($dangnhap[0]['cliPass']);
         foreach($query_dangnhap as $key)
         {
-            
             if($key['0']>'0')
             {
-                $kiemtra_matkhau=password_verify($matkhau,$dangnhap[0]['cliPass']);
-                if($kiemtra_matkhau==true)
-                {
+                if (password_verify($matkhau, $dangnhap[0]['cliPass'])) {
                     $_SESSION['user']=$dangnhap;
                     echo "<script>";
                     echo "window.location='../index.php'";
                     echo "</script>";
-                    }
-                else
-                {
+                }
+                else {
                     echo "<script>";
                     echo "alert('Sai mật khẩu!');";
                     echo "window.location='../pages/Dangnhap.php'";

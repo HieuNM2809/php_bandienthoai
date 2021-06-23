@@ -90,7 +90,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="checkout_btn_inner float-right" style="margin-left: 60vw;">
+                <div class="checkout_btn_inner float-right" style="margin-left: 50vw;">
                     <a class="btn btn-success" href="<?php echo $level."pages/MuaHang.php";?>">Tiếp Tục Mua Hàng</a>
                     <a class="btn btn-success" href="<?php echo $level."pages/cart.php?action=insert";?>">Thanh
                         Toán</a>

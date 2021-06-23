@@ -38,12 +38,13 @@ if($_REQUEST['suserLogin']){
             "insert into `staff` ( `staName`, `staBirthday`, `staAddress`, `staImg`, `staPhone`, `staSex`, `staDescription`, `staStatus`, `staSalary`, `staPosition`, `LoginID`)  
             VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             $paranstaff = [];
+           
             array_push($paranstaff,$_REQUEST['sname'],$_REQUEST['sdate'],$_REQUEST['saddress']);
             array_push($paranstaff,$_FILES["simage"]["name"],$_REQUEST['sphone'],$_REQUEST['sSex']);
             array_push($paranstaff,$_REQUEST['sDescription'],1,$_REQUEST['ssalary']);
             array_push($paranstaff,$_REQUEST['sposition'],$_REQUEST['sID']);
 
-            $insStaff = DP::run_query($strinsStaff,$paranstaff,   1);
+            $insStaff = DP::run_query($strinsStaff,$paranstaff, 1);
             if($insLogin == true && $insStaff  ==true){  
                 echo '<script language="javascript">';
                 echo 'alert("Đã thêm nhân viên thành công");';

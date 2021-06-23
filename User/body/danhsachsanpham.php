@@ -10,9 +10,8 @@
                         <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                     </a>
                     <ul class="collapse show list-unstyled pl-3">
-                        <li><a class="text-decoration-none" href="<?php echo "?cat=2"?>">Cảm Ứng</a></li>
-                        <li><a class="text-decoration-none" href="<?php echo "?cat=1"?>">Bàn Phím</a></li>
-                        <li><a class="text-decoration-none" href="<?php echo "?cat=3"?>">Gamming</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?cat=2"?>">Điện thoại cảm ứng</a></li>
+                        <li><a class="text-decoration-none" href="<?php echo "?cat=1"?>">Điện thoại Phím</a></li>
                     </ul>
                 </li>
                 <li class="pb-3">
@@ -159,7 +158,7 @@
                                 <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="?page='.$i. '">'.$i.'</a>
                                  </li>';
                             }
-                    }?>
+                   }?>
                 </ul>
             </div>
         </div>

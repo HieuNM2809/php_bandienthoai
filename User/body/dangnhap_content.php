@@ -41,7 +41,7 @@
                                     <div class="creat_account d-flex align-items-center">
                                         <a class="lost_pass" href="<?php echo $level.pages_path."DangKy.php";?>">Đăng Kí
                                             tài khoản</a>
-                                        <a class="lost_pass" href="#" style="margin-left: 14vw;">Quên mật khẩu?</a>
+                                        <!-- <a class="lost_pass" href="#" style="margin-left: 14vw;">Quên mật khẩu?</a> -->
                                     </div>
                                 </div>
                             </form>
